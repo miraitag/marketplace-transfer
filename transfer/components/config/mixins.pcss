@@ -1,0 +1,252 @@
+@custom-media --max-mobile (width <= 767px);
+@custom-media --portrait (width >= 768px);
+@custom-media --max-portrait (width <= 1023px);
+@custom-media --small-desktop (width >= 1024px);
+@custom-media --max-small-desktop (width <= 1279px);
+@custom-media --large-desktop (width >= 1280px);
+@custom-media --max-large-desktop (width <= 1439px);
+@custom-media --full (width >= 1440px);
+
+@define-mixin viewport $query, $prop, $size {
+	@if $query == "xs" {
+		$(prop): calc($size*100/320)vw;
+	} @else if $query == "lg" {
+		$(prop): calc($size*100/1024)vw;
+	} @else if $query == "xl" {
+		$(prop): calc($size*80/1280)vw;
+	} @else if $query == "xxl" {
+		$(prop): calc($size*100/1440)vw;
+	}
+}
+
+@define-mixin border-radius $query {
+	@if $query == "xs" {
+		border-radius: calc(4*100/320)vw;
+	} @else if $query == "sm" {
+		border-radius: 4px;
+	} @else if $query == "lg" {
+		border-radius: calc(4*100/1024)vw;
+	} @else if $query == "xl" {
+		border-radius: calc(4*100/1280)vw;
+	} @else if $query == "xxl" {
+		border-radius: calc(4*100/1440)vw;
+	}
+}
+
+@define-mixin rgba $prop, $rgb, $opacity {
+	$(prop): rgba($rgb, $opacity);
+}
+
+/* @define-mixin blue-wave 
+	$name, 
+	$cyan: #00bdf2, 
+	$citi-blue: #002d72,
+	$priority-blue: #003558, 
+	$priority-dark-blue: #11172c, 
+	$beyond-light: #4a4a4a,
+	$beyond-dark: #000000, 
+	$background-gray: #f2f4f8, 
+	$white: #fff 
+{
+	@if $name == "citi" {
+		background: linear-gradient(to bottom, $cyan 0%, $citi-blue 100%);
+	} @else if $name == "citi-reverse" {
+		background: linear-gradient(to bottom, $citi-blue 0%, $cyan 100%);
+	} @else if $name == "priority" {
+		background: linear-gradient(to right, $priority-blue 0%, $priority-dark-blue 100% );
+	} @else if $name == "beyond" {
+		background: linear-gradient(to bottom, $beyond-light 0%, $beyond-dark 100%);
+	} @else if $name == "gray-gradient" {
+		background: linear-gradient(to bottom, $background-gray 0%, $white 100%);
+	}
+} */
+
+/* @define-mixin gradient-menu $dark-gray: #53565a, $darkest-gray: #323232 {
+	background: linear-gradient(to bottom, $dark-gray 0%, $darkest-gray 100%);
+} */
+
+@define-mixin box-shadow $media, $name, $citi-blue: 0, 45, 114, $black: 0, 0, 0 {
+	/* BOX SHADOW MOBILE */
+	@if $name == "big-out" and $media == "xs" {
+		box-shadow: 0 calc(12 * 100 / 320)vw calc(36 * 100 / 320)vw rgba($citi-blue, 0.15);
+	} @else if $name == "large-out" and $media == "xs" {
+		box-shadow: 0 calc(9 * 100 / 320)vw calc(24 * 100 / 320)vw rgba($citi-blue, 0.15);
+	} @else if $name == "medium-out" and $media == "xs" {
+		box-shadow: 0 calc(6 * 100 / 320)vw calc(16 * 100 / 320)vw rgba($citi-blue, 0.15);
+	} @else if $name == "small-out" and $media == "xs" {
+		box-shadow: 0 calc(3 * 100 / 320)vw calc(8 * 100 / 320)vw rgba($citi-blue, 0.15);
+	} @else if $name == "big-inset" and $media == "xs" {
+		box-shadow: inset calc(8 * 100 / 320)vw calc(-8 * 100 / 320)vw calc(16 * 100 / 320)vw rgba($black, 0.2);
+	} @else if $name == "med-inset" and $media == "xs" {
+		box-shadow: inset calc(4 * 100 / 320)vw calc(-4 * 100 / 320)vw calc(8 * 100 / 320)vw rgba($black, 0.2);
+	} @else if $name == "small-inset" and $media == "xs" {
+		box-shadow: inset calc(2 * 100 / 320)vw calc(-2 * 100 / 320)vw calc(4 * 100 / 320)vw rgba($black, 0.2);
+	} @else if $name == "big-out-reverse" and $media == "xs" {
+		box-shadow: 0 calc(-8 * 100 / 320)vw calc(16 * 100 / 320)vw rgba($black, 0.2);
+	} @else if $name == "med-out-reverse" and $media == "xs" {
+		box-shadow: 0 calc(-4 * 100 / 320)vw calc(8 * 100 / 320)vw rgba($black, 0.2);
+	} @else if $name == "small-out-reverse" and $media == "xs" {
+		box-shadow: 0 calc(-2 * 100 / 320)vw calc(4 * 100 / 320)vw rgba($black, 0.2);
+	}
+	/* BOX SHADOW PORTRAIT */
+	@if $name == "big-out" and $media == "sm" {
+		box-shadow: 0 12px 36px rgba($citi-blue, 0.15);
+	} @else if $name == "large-out" and $media == "sm" {
+		box-shadow: 0 9px 24px rgba($citi-blue, 0.15);
+	} @else if $name == "medium-out" and $media == "sm" {
+		box-shadow: 0 6px 16px rgba($citi-blue, 0.15);
+	} @else if $name == "small-out" and $media == "sm" {
+		box-shadow: 0 3px 8px rgba($citi-blue, 0.15);
+	} @else if $name == "big-inset" and $media == "sm" {
+		box-shadow: inset 8px -8px 16px rgba($black, 0.2);
+	} @else if $name == "med-inset" and $media == "sm" {
+		box-shadow: inset 4px -4px 8px rgba($black, 0.2);
+	} @else if $name == "small-inset" and $media == "sm" {
+		box-shadow: inset 2px -2px 4px rgba($black, 0.2);
+	} @else if $name == "big-out-reverse" and $media == "sm" {
+		box-shadow: 0 -8px 16px rgba($black, 0.2);
+	} @else if $name == "med-out-reverse" and $media == "sm" {
+		box-shadow: 0 -4px 8px rgba($black, 0.2);
+	} @else if $name == "small-out-reverse" and $media == "sm" {
+		box-shadow: 0 -2px 4px rgba($black, 0.2);
+	}
+	/* BOX SHADOW SMALL-DESKTOP */
+	@if $name == "big-out" and $media == "lg" {
+		box-shadow: 0 calc(12 * 100 / 1024)vw calc(36 * 100 / 1024)vw rgba($citi-blue, 0.15);
+	} @else if $name == "large-out" and $media == "lg" {
+		box-shadow: 0 calc(9 * 100 / 1024)vw calc(24 * 100 / 1024)vw rgba($citi-blue, 0.15);
+	} @else if $name == "medium-out" and $media == "lg" {
+		box-shadow: 0 calc(6 * 100 / 1024)vw calc(16 * 100 / 1024)vw rgba($citi-blue, 0.2);
+	} @else if $name == "small-out" and $media == "lg" {
+		box-shadow: 0 calc(3 * 100 / 1024)vw calc(8 * 100 / 1024)vw rgba($citi-blue, 0.2);
+	} @else if $name == "big-inset" and $media == "lg" {
+		box-shadow: inset calc(8 * 100 / 1024)vw calc(-8 * 100 / 1024)vw calc(16 * 100 / 1024)vw rgba($black, 0.2);
+	} @else if $name == "med-inset" and $media == "lg" {
+		box-shadow: inset calc(4 * 100 / 1024)vw calc(-4 * 100 / 1024)vw calc(8 * 100 / 1024)vw rgba($black, 0.2);
+	} @else if $name == "small-inset" and $media == "lg" {
+		box-shadow: inset calc(2 * 100 / 1024)vw calc(-2 * 100 / 1024)vw calc(4 * 100 / 1024)vw rgba($black, 0.2);
+	} @else if $name == "big-out-reverse" and $media == "lg" {
+		box-shadow: 0 calc(-8 * 100 / 1024)vw calc(16 * 100 / 1024)vw rgba($black, 0.2);
+	} @else if $name == "med-out-reverse" and $media == "lg" {
+		box-shadow: 0 calc(-4 * 100 / 1024)vw calc(8 * 100 / 1024)vw rgba($black, 0.2);
+	} @else if $name == "small-out-reverse" and $media == "lg" {
+		box-shadow: 0 calc(-2 * 100 / 1024)vw calc(4 * 100 / 1024)vw rgba($black, 0.2);
+	}
+	/* BOX SHADOW LARGE-DESKTOP */
+	@if $name == "big-out" and $media == "xl" {
+		box-shadow: 0 calc(12 * 100 / 1280)vw calc(36 * 100 / 1280)vw rgba($citi-blue, 0.15);
+	} @else if $name == "large-out" and $media == "xl" {
+		box-shadow: 0 calc(9 * 100 / 1280)vw calc(24 * 100 / 1280)vw rgba($citi-blue, 0.15);
+	} @else if $name == "medium-out" and $media == "xl" {
+		box-shadow: 0 calc(6 * 100 / 1280)vw calc(16 * 100 / 1280)vw rgba($citi-blue, 0.15);
+	} @else if $name == "small-out" and $media == "xl" {
+		box-shadow: 0 calc(3 * 100 / 1280)vw calc(8 * 100 / 1280)vw rgba($citi-blue, 0.15);
+	} @else if $name == "big-inset" and $media == "xl" {
+		box-shadow: inset calc(8 * 100 / 1280)vw calc(-8 * 100 / 1280)vw calc(16 * 100 / 1280)vw rgba($black, 0.2);
+	} @else if $name == "med-inset" and $media == "xl" {
+		box-shadow: inset calc(4 * 100 / 1280)vw calc(-4 * 100 / 1280)vw calc(8 * 100 / 1280)vw rgba($black, 0.2);
+	} @else if $name == "small-inset" and $media == "xl" {
+		box-shadow: inset calc(2 * 100 / 1280)vw calc(-2 * 100 / 1280)vw calc(4 * 100 / 1280)vw rgba($black, 0.2);
+	} @else if $name == "big-out-reverse" and $media == "xl" {
+		box-shadow: 0 calc(-8 * 100 / 1280)vw calc(16 * 100 / 1280)vw rgba($black, 0.2);
+	} @else if $name == "med-out-reverse" and $media == "xl" {
+		box-shadow: 0 calc(-4 * 100 / 1280)vw calc(8 * 100 / 1280)vw rgba($black, 0.2);
+	} @else if $name == "small-out-reverse" and $media == "xl" {
+		box-shadow: 0 calc(-2 * 100 / 1280)vw calc(4 * 100 / 1280)vw rgba($black, 0.2);
+	}
+	/* BOX SHADOW FULL */
+	@if $name == "big-out" and $media == "xxl" {
+		box-shadow: 0 calc(12 * 100 / 1440)vw calc(36 * 100 / 1440)vw rgba($citi-blue, 0.15);
+	} @else if $name == "large-out" and $media == "xxl" {
+		box-shadow: 0 calc(9 * 100 / 1440)vw calc(24 * 100 / 1440)vw rgba($citi-blue, 0.15);
+	} @else if $name == "medium-out" and $media == "xxl" {
+		box-shadow: 0 calc(6 * 100 / 1440)vw calc(16 * 100 / 1440)vw rgba($citi-blue, 0.15);
+	} @else if $name == "small-out" and $media == "xxl" {
+		box-shadow: 0 calc(3 * 100 / 1440)vw calc(8 * 100 / 1440)vw rgba($citi-blue, 0.15);
+	} @else if $name == "big-inset" and $media == "xxl" {
+		box-shadow: inset calc(8 * 100 / 1440)vw calc(-8 * 100 / 1440)vw calc(16 * 100 / 1440)vw rgba($black, 0.2);
+	} @else if $name == "med-inset" and $media == "xxl" {
+		box-shadow: inset calc(4 * 100 / 1440)vw calc(-4 * 100 / 1440)vw calc(8 * 100 / 1440)vw rgba($black, 0.2);
+	} @else if $name == "small-inset" and $media == "xxl" {
+		box-shadow: inset calc(2 * 100 / 1440)vw calc(-2 * 100 / 1440)vw calc(4 * 100 / 1440)vw rgba($black, 0.2);
+	} @else if $name == "big-out-reverse" and $media == "xxl" {
+		box-shadow: 0 calc(-8 * 100 / 1440)vw calc(16 * 100 / 1440)vw rgba($black, 0.2);
+	} @else if $name == "med-out-reverse" and $media == "xxl" {
+		box-shadow: 0 calc(-4 * 100 / 1440)vw calc(8 * 100 / 1440)vw rgba($black, 0.2);
+	} @else if $name == "small-out-reverse" and $media == "xxl" {
+		box-shadow: 0 calc(-2 * 100 / 1440)vw calc(4 * 100 / 1440)vw rgba($black, 0.2);
+	}
+}
+
+@define-mixin text-shadow $media, $black: 0, 0, 0 {
+	@if $media == "xs" {
+		text-shadow: 0 calc(3 * 100 / 320)vw calc(8 * 100 / 320)vw rgba($black, 0.5);
+	} @else if $media == "sm" {
+		text-shadow: 0 3px 8px rgba($black, 0.5);
+	} @else if $media == "lg" {
+		text-shadow: 0 calc(3 * 100 / 1024)vw calc(8 * 100 / 1024)vw rgba($black, 0.5);
+	} @else if $media == "xl" {
+		text-shadow: 0 calc(3 * 100 / 1280)vw calc(8 * 100 / 1280)vw rgba($black, 0.5);
+	} @else if $media == "xxl" {
+		text-shadow: 0 calc(3 * 100 / 1440)vw calc(8 * 100 / 1440)vw rgba($black, 0.5);
+	}
+}
+
+@define-mixin absolute $position {
+	@if $position == "center" {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	} @else if $position == "center-vertical" {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	} @else if $position == "center-horizontal" {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+/* @define-mixin placeholder-img $soft-gray: #eee {
+	background: {
+		color: $soft-gray;
+		size: cover;
+		position: center;
+	}
+} */
+
+@define-mixin appearance {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+@define-mixin position-sticky {
+	position: sticky;
+	position: -webkit-sticky;
+}
+
+@define-mixin scale $type {
+	@if $type == "value" {
+		transform: scale(1);
+	} @else if $type == "hover" {
+		transform: scale(1.1);
+	}
+}
+
+@define-mixin transition $props, $time: 350ms, $function-timing: ease-out {
+	transition: {
+		property: $props;
+		duration: $time;
+		timing-function: $function-timing;
+	}
+}
+
+@define-mixin transition-duration $time: 350ms, $function-timing: ease-out {
+	transition: {
+		duration: $time;
+		timing-function: $function-timing;
+	}
+}
