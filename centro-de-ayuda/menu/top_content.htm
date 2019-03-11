@@ -1,0 +1,174 @@
+<div class="dft-contain xs-pd-bottom-20 sm-pd-bottom-40 lg-pd-bottom-40">
+	<h1 class="dft-title title-2  xs-pd-bottom-40 sm-pd-bottom-20 lg-pd-bottom-20">Centro de Ayuda Citibanamex</h1>
+	<h2 class="hidden-xs dft-title title-4 sm-pd-bottom-60 lg-pd-bottom-60">Estamos listos para resolver tus dudas</h2>
+	<div class="dft-scroll-service">
+		<div class="scroll-content">
+			<article class="xs-align-txt-c xs-pd-top-20 sm-pd-top-20 md-pd-top-0 lg-pd-top-0 xs-pd-right-40 sm-pd-right-40 md-pd-right-0">
+				<span class="dft-icon-chat cr-citi-wave circle-icon"></span>
+				<h3 class="xs-align-txt-c md-align-txt-l dft-text">Pregúntanos por chat en <br>
+					<span class="dft-tooltip-out" data-tooltip='{"name": "Twitter", "link": "https://twitter.com/messages/compose?recipient_id=92367652", "metrica":"metrica(event,this,\"Twitter\")","target":"_blank", "direction":"top"}'>
+						<a class="cursor-pointer dft-text-link text-link font-web" >Twitter</a> o
+					</span>
+					<span class="dft-tooltip-out" data-tooltip='{"name": "Facebook","metrica": "metrica(event,this,\"Facebook\")","link": "http://m.me/citibanamex", "target":"_blank", "direction":"top"}'>
+						<a class="cursor-pointer dft-text-link text-link font-web">Facebook</a></h3>
+					</span>
+			</article>
+			<article class="xs-align-txt-c xs-pd-top-20 sm-pd-top-20 md-pd-top-0 lg-pd-top-0 xs-pd-left-30 xs-pd-right-30 sm-pd-left-40 sm-pd-right-40 sm-pd-left-30 sm-pd-right-30 lg-pd-left-30 lg-pd-right-30">
+				<span class="dft-icon-call cr-citi-wave circle-icon"></span>
+				<h3 class="xs-align-txt-c md-align-txt-l dft-text">
+					Llámanos al <a class="xs-align-txt-c md-align-txt-l dft-text xs-link xs-txt-underline sm-link sm-txt-underline ls-link ls-txt-underline md-no-event lg-no-event tel" href="tel:5512262639">55 1226 2639</a> <br>
+					<!-- <span class="phones dft-modal-target" data-toggle="modal" data-target=".dft-modal-phones" component='{"module":"dft-tabs-vertical", "title":"¡Comuní­cate con nosotros!"}'>
+						<a class="dft-text-link text-link font-web cursor-pointer" onclick='homeM.sendinteraction("CentroAyuda|Telefonos")'>Ver más teléfonos</a>
+					</span> -->
+					<a class="dft-text-link text-link font-web" href="/telefonos-citibanamex.html" target="_blank" metrica-footer="|Footer|Ayuda|Teléfonos">Ver más teléfonos</a>
+				</h3>
+			</article>
+			<article class="xs-align-txt-c xs-pd-top-20 sm-pd-top-20 md-pd-top-0 lg-pd-top-0 xs-pd-left-40 sm-pd-left-40 md-pd-left-0">
+				<span class="dft-icon-mail-two cr-citi-wave circle-icon"></span>
+				<h3 class="xs-align-txt-c md-align-txt-l dft-text">Escríbenos o envíanos un<br>
+					<span class="dft-modal-target" data-toggle="modal" data-target=".dft-modal-contactanos" component='{"module":"dft-content-contactanos", "title":"Estamos para ayudarte, déjanos contactarte"}' metrics-interaction="|CentroAyuda|Email">
+						<a  class="dft-text-link text-link font-web cursor-pointer" >Correo electrónico</a>
+					</span>
+				</h3>
+			</article>
+		</div>
+	</div>
+</div>
+<style>
+.attr-tooltip, .dft-tooltip-out .dft-tooltip-out__content .tooltip-out, 
+body.open-tooltip .dft-tooltip-out__content .tooltip-out{
+	white-space:normal;
+}
+</style>
+<script>
+var inicioCaptura = true;
+var resp = "";
+
+// Metrica que envía las respuestas del formulario
+function sendForm(event){
+		try{
+			var jsonObj = JSON.parse(event.data);
+			if(jsonObj.status == "OK"){
+				s.linkTrackVars='eVar30,eVar45,events';
+				s.linkTrackEvents='event4';
+				s.eVar30= s.pageName+'|Formulario|Ayuda|Exitoso';
+				s.eVar45= s.pageName+'|Formulario|Ayuda'+ '|' +resp+"-"+$("input[name='field_4']").val();;
+				s.events='event4';
+				s.tl(this,'o',s.pageName+'-Self Service Completes');
+			}
+			
+		}catch(e){
+			// s.linkTrackVars='eVar12,events';
+			// s.linkTrackEvents='event9';
+			// s.eVar12=s.pageName+'|Registro|Error';
+			// s.events='event9';
+			// s.tl(this,'o',s.pageName+'-PageInteraction');
+			// console.log(e)
+		}
+	
+	window.removeEventListener("message",sendForm);
+}
+		
+
+function metrica(event, el, title) {
+	//event.preventDefault();
+
+	// s.linkTrackVars = 'eVar46,events';
+	// s.linkTrackEvents = 'event33';
+	// s.eVar46 = s.pageName + '|CentroAyuda|' + title;
+	// s.events = 'event33';
+	// s.tl(this, 'o', s.pageName + '-Social Interactions');
+
+	// metrics.read($(el));
+	// window.open($(el).attr("data-href"))
+}
+// $(".dft-tooltip-out").on("click",function(){
+// 	setTimeout(function(){
+// 		let selector = $("body").hasClass("navMobile") ? "footer" : "span.dft-tooltip-out";
+// 			$(selector).find(".dft-info__link").attr("data-href",$(selector).find(".dft-info__link").attr("href"))
+// 			$(selector).find(".dft-info__link").removeAttr("href");
+// 			$(selector).find(".dft-info__link").addClass("cursor-pointer");
+// 	}, 500);
+// })
+
+$(document).ready(function(){
+
+	$(".formself_dec").on("click",function () {
+		resp = $(this).text();
+	})
+
+	$(".dft-icon-link-fill").on("click",function(){
+		$("body").append("<input type='text' id='copy'/>")
+		$("#copy").val(window.location.href).select() 
+		document.execCommand("copy")
+		$("#copy").remove();
+	})
+
+	var element = $("a[href='index.html']");
+	$(element).attr("metrics-interaction","|RegresarMenu")
+	$(element).removeAttr("href").addClass("cursor-pointer")
+	$(element).on("click",function(event){
+		event.preventDefault()
+		setTimeout(function() {
+			window.open("index.html","_self")
+		}, 1000);
+
+	})
+
+	$(".dft-icon-link-fill").parent().attr("metrics-interaction","|Compartir|CopiarUrl")
+	$(".dft-icon-link-fill").parent().removeAttr("href").addClass("cursor-pointer")
+	
+	// var tooltip = {"metrica": "homeM.sendsocial(\"|Compartir|Twitter\")","name": "Twitter", "link": "https://twitter.com/intent/tweet?text="+window.location.href , "target":"_blank", "direction":"top", "legal":"\"Twitter y el logotipo de Twitter son marcas comerciales de Twitter, Inc. o de sus afiliadas\"."};
+	// $(".dft-icon-twitter-official").parent().attr("data-tooltip",JSON.stringify(tooltip))
+	// $(".dft-icon-twitter-official").parent().removeAttr("href").addClass("cursor-pointer").addClass("dft-tooltip-out")
+	
+	$("#form_self input,#form_self textArea").on("keypress",function(){
+		if(inicioCaptura){
+			s.linkTrackVars='eVar25,events';
+			s.linkTrackEvents='event30';
+			s.eVar25=s.pageName+'|Formulario|Ayuda|InicioCaptura';
+			s.events='event30';
+			s.tl(this,'o',s.pageName+'- Page Interaction');
+		}
+		inicioCaptura = false
+	})
+	
+	$("#send_CentroAyuda").on("click",function(){
+	
+		var validation = $(this).closest("form").validationLibrary();
+		if(!validation.validate()){
+			var errors = "";
+			$(".validation-message-danger").each(function(index, val) {
+				if ($(this).css("display") != "none") {
+
+					errors = $(this).parent().find("label").text().trim() != "" ? errors + "-" + $(this).parent().find("label").first().text().trim() : errors + "-" + $(this).parent().parent().find("label").first().text().trim()
+				}
+
+			});
+			
+			// Metrica para detectar el campo de error al enviar el formulario
+			s.linkTrackVars='prop26,events';
+			s.linkTrackEvents='event45';
+			s.prop26 = s.pageName + '|Formulario|Ayuda|' + errors.substring(1);
+			s.events = 'event45';
+			s.tl(this, 'o', s.pageName + '-Form Validation Errors');
+
+		} else {
+			window.addEventListener("message",sendForm,false);
+
+		}
+		
+	})
+	$("article.xs-bg-grey-1 a.dft-text").removeAttr("href").addClass("cursor-pointer")
+	$("article.xs-bg-grey-1 a.dft-text").on("click",function(){
+		s.linkTrackVars='eVar30,events';
+		s.linkTrackEvents='event3';
+		s.eVar30=s.pageName+'|Formulario|Ayuda|'+$(this).text().trim();
+		s.events='event3,event30';
+		s.tl(this,'o',s.pageName+'-Self Service Starts');
+
+	});
+
+})
+
+</script>

@@ -1,0 +1,47 @@
+<div class="panel-group dft-nav-service hidden-xs" id="accordion" >
+	 <div class="panel br-top br-bottom br-1 br-grey-1">
+		 <a class="dft-text xs-pd-top-10 sm-pd-top-10 sm-pd-bottom-10 lg-pd-top-10 lg-pd-bottom-10" data-parent="#accordion" href="/transfer/centro-de-ayuda/cuenta-transfer-citibanamex/cuenta-transfer-citibanamex.html" aria-expanded="false">
+			 <h2 class="dft-text">CUENTA TRANSFER CITIBANAMEX</h2>
+			 <p class="visible-xs dft-text text-small cr-grey-7 xs-pd-bottom-10">Cargos no reconocidos, Localíza tu tarjeta</p>
+		 </a>
+	 </div>
+	 <div class="panel br-top br-bottom br-1 br-grey-1">
+		<a class="dft-text xs-pd-top-10 sm-pd-top-10 sm-pd-bottom-10 lg-pd-top-10 lg-pd-bottom-10" data-parent="#accordion" href="/transfer/centro-de-ayuda/app-transfer/app-transfer.html" aria-expanded="false">
+			<h2 class="dft-text">APP TRANSFER</h2>
+			<p class="visible-xs dft-text text-small cr-grey-7 xs-pd-bottom-10">Cargos no reconocidos, Localíza tu tarjeta</p>
+		</a>
+	</div>
+	 <div class="panel br-bottom br-1 br-grey-1 ">
+		 <a class="cursor-pointer dft-text collapsed xs-pd-top-10 sm-pd-top-10 sm-pd-bottom-10 lg-pd-top-10 lg-pd-bottom-10" data-toggle="collapse" data-parent="#accordion" data-target="#creditos" aria-expanded="false"
+		 metrics-interaction="|Menu|CRÉDITOS|Contraer">
+			 <h2 class="dft-text">SALDAZO</h2>
+			 <span class="dft-icon-plus-menu icon-menu"></span>
+			 <p class="visible-xs dft-text text-small cr-grey-7 xs-pd-bottom-10">Caso de siniestro, Protección 360, Pólizas</p>
+		 </a>
+		 <div id="creditos" class="collapse">
+			 <ul class="list-unstyled xs-pd-left-40 sm-pd-left-40 lg-pd-left-40">
+				 <li class="xs-mr-bottom-20 sm-mr-bottom-20 lg-mr-bottom-20">
+					<h3>
+						<span class="element-inline middle dft-icon-right xs-mr-right-5 sm-mr-right-5 lg-mr-right-5"></span>
+						<a class="element-inline middle dft-text dft-text" href="/transfer/centro-de-ayuda/tarjeta-saldazo/tarjeta-saldazo.html">Tarjeta Saldazo</a>
+					</h3>
+				</li>
+				<li class="xs-mr-bottom-20 sm-mr-bottom-20 lg-mr-bottom-20">
+					<h3>
+						<span class="element-inline middle dft-icon-right xs-mr-right-5 sm-mr-right-5 lg-mr-right-5"></span>
+						<a class="element-inline middle dft-text dft-text" href="/transfer/centro-de-ayuda/tarjetas-digital/tarjeta-digital.html">Tarjeta Digital</a>
+					</h3>
+				</li>
+			 </ul>
+		 </div>
+	 </div>
+ </div>
+
+ <script>
+ $("a[data-toggle='collapse']").on("click",function(){
+	if($(this).attr("metrics-interaction").indexOf("Contraer") >= 0)
+		$(this).attr("metrics-interaction",$(this).attr("metrics-interaction").replace("Contraer","Expandir"))
+	else
+		$(this).attr("metrics-interaction",$(this).attr("metrics-interaction").replace("Expandir","Contraer"))
+	});
+ </script>

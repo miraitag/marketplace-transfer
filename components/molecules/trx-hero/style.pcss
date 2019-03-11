@@ -1,0 +1,18 @@
+@import "../../config/mixins.pcss";
+
+.trx-hero{
+	@mixin viewport xs, height, 400;
+	overflow: hidden;
+	& .hero-labels{
+		& .content-hero{
+			@mixin viewport xs, top, 40;
+			transform: none;
+		}
+	}
+}
+
+@media (--max-mobile){
+	.trx-hero{
+		
+	}
+}
