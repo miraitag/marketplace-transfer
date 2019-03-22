@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/transfer/assets/css/trx-templates-home.min.css">
 </head>
 <body>
-	<header class="trx-header" m-menu-fixed="false" m-menu-open="false">
+	<header id="trx-header-main" class="trx-header" m-menu-fixed="false" m-menu-open="false">
 		<a href="/" class="header-logos">
 			<figure class="cbx-img">
 				<svg viewBox="0 0 415 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -40,37 +40,405 @@
 		</a>
 		<nav>
 			<button type="button">
-				HAM
+				<svg class="cbx-svg-icon" m-size="30" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g>
+						<path d="M1,12 L23,12 L1,12 Z M1,5 L23,5 L1,5 Z M1,19 L23,19 L1,19 Z"></path>
+					</g>
+				</svg>
 			</button>
 			<ul>
-				<li>
+				<li class="list-item">
 					<a class="cbx-link" href="" m-active="true">Conócenos</a>
 				</li>
-				<li>
+				<li class="list-item">
 					<a class="cbx-link" href="" m-active="false">Servicios</a>
 				</li>
-				<li>
+				<li class="list-item">
 					<a class="cbx-link" href="" m-active="false">Ayuda</a>
 				</li>
 			</ul>
-			<button class="cbx-button">Descarga la app</button>
+			<a href="" class="cbx-button trx-button">Descarga la app</a>
 		</nav>
+		<button type="button">
+			<svg class="cbx-svg-icon" m-size="30" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<g transform="translate(-4.000000, -4.000000)">
+					<path d="M14.2109041,11.9750005 L20.3238426,18.0879389 L18.4429385,19.968843 L12.33,13.8559046 L6.2170616,19.968843 L4.3361575,18.0879389 L10.4490959,11.9750005 L4.3361575,5.86206205 L6.2170616,3.98115795 L12.33,10.0940964 L18.4429385,3.98115795 L20.3238426,5.86206205 L14.2109041,11.9750005 Z"></path>
+				</g>
+			</svg>
+		</button>
 	</header>
 	<section m-desk="hero" m-theme="white" class="cbx-hero trx-hero">
 		<picture class="cbx-img">
-			<source media="(max-width: 767px)" srcset="/transfer/assets/img/index/mobile/CrossSellLanding1-x2.jpg">
-			<source media="(min-width: 768px)" srcset="/transfer/assets/img/index/desktop/CrossSellLanding1-x2.jpg" alt="">
-			<img src="/transfer/assets/img/index/desktop/CrossSellLanding1-x2.jpg" alt="Seguros Citibanamex">
+			<source media="(max-width: 767px)" srcset="/transfer/assets/img/index/mobile/HeroLanding1-x2.jpg">
+			<source media="(min-width: 768px)" srcset="/transfer/assets/img/index/desktop/HeroLanding1-x2.jpg" alt="">
+			<img src="/transfer/assets/img/index/desktop/HeroLanding1-x2.jpg" alt="Seguros Citibanamex">
 		</picture>
 		<div class="hero-labels">
 			<div class="content-hero">
 				<h1 class="cbx-category">CUENTA TRANSFER CITIBANAMEX</h1>
 				<h2 class="cbx-headline-hero">Descarga la app Transfer</h2>
 				<h3 class="cbx-sub-headline">y crea tu cuenta digital en minutos para recibir y retirar dinero desde tu celular</h3>
+				<div class="cbx-apps">
+					<button type="button" m-mody="apple" m-web="true" m-exit='{"metrics":"CitibanamexMovil-irAppStore", "sponsor":"App Store", "path": "https://itunes.apple.com/mx/app/citibanamex-m%C3%B3vil/id498483038?mt=8", "extra":"}'' tabindex="-1">
+						<figure class="cbx-img">
+							<img src="/assets/img/badge_apps/app-store.png" data-src="/assets/img/badge_apps/app-store.png" alt="App Store">
+						</figure>
+					</button>
+					<button type="button" m-mody="google" m-web="true" m-exit='{"metrics":"CitibanamexMovil-irGooglePlay", "sponsor":"Play Store", "path": "https://play.google.com/store/apps/details?id=com.citibanamex.banamexmobile&amp;hl=es_419", "extra":"}'' tabindex="-1" hidden="hidden">
+						<figure class="cbx-img">
+							<img src="/assets/img/badge_apps/google-play-store.png" alt="Google Play Store">
+						</figure>
+					</button>
+				</div>
 			</div>
 		</div>
 	</section>
+	<section m-desk="benefits" m-back="background-gray">
+		<div class="cbx-wrapper benefits-cuentas">
+			<p class="cbx-headline-section">¿Qué puedo hacer con mi Cuenta desde la App Transfer?</p>		
+			<div class="cuenta-cards">
+				<article class="cbx-card trx-card" m-mody="c-img c-img-half">
+					<figure class="cbx-img">
+						<img src="/transfer/assets/img/index/Card1-x2.jpg" alt="">
+					</figure>
+					<div class="card-content">
+						<div class="card-description">
+							<svg class="cbx-svg-icon" m-size="25" viewBox="0 0 49 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<g transform="translate(-15.000000, 0.000000)">
+									<path d="M52.7330621,77.0758886 C56.9332568,77.0758886 60.338758,73.6703874 60.338758,69.4701927 L60.338758,10.5298073 C60.338758,6.32961257 56.9332568,2.92411143 52.7330621,2.92411143 L25.5298073,2.92411143 C21.3296126,2.92411143 17.9241114,6.32961257 17.9241114,10.5298073 L17.9241114,69.4701927 C17.9241114,73.6703874 21.3296126,77.0758886 25.5298073,77.0758886 L52.7330621,77.0758886 Z M52.7330621,80 L25.5298073,80 C19.7146704,80 15,75.2853296 15,69.4701927 L15,10.5298073 C15,4.71467042 19.7146704,-1.51499406e-15 25.5298073,0 L52.7330621,6.70925941e-15 C58.548199,8.22425347e-15 63.2628694,4.71467042 63.2628694,10.5298073 L63.2628694,69.4701927 C63.2628694,75.2853296 58.548199,80 52.7330621,80 Z M39.6515421,69.825771 C39.6515421,69.3690819 39.2822051,69 38.825771,69 C38.3680468,69 38,69.3680468 38,69.825771 C38,70.2822051 38.3690819,70.6515421 38.825771,70.6515421 C39.2811695,70.6515421 39.6515421,70.2811695 39.6515421,69.825771 Z M42.6515421,69.825771 C42.6515421,71.9380238 40.9380238,73.6515421 38.825771,73.6515421 C36.7117636,73.6515421 35,71.9385955 35,69.825771 C35,67.7111925 36.7111925,66 38.825771,66 C40.9385955,66 42.6515421,67.7117636 42.6515421,69.825771 Z M34.5234308,6 L43.4765692,6 C45.5078103,6 45.5078103,9 43.4765692,9 L34.5234308,9 C32.4921897,9 32.4921897,6 34.5234308,6 Z M47.066,42.026 C47.066,45.361 45.152,47.449 41.324,47.942 L41.324,50.9 L38.279,50.9 L38.279,47.942 C35.872,47.623 33.668,46.434 32.334,44.723 L34.654,42.751 C36.133,44.346 37.873,45.1 39.787,45.1 C42.687,45.1 43.963,44.143 43.963,42.345 C43.963,40.75 42.832,40.054 39.439,39.039 C35.118,37.763 33.088,36.69 33.088,33.181 C33.088,30.165 35.321,28.251 38.279,27.787 L38.279,24.8 L41.324,24.8 L41.324,27.787 C43.354,28.106 45.007,29.034 46.428,30.455 L44.311,32.601 C42.89,31.354 41.643,30.6 39.555,30.6 C37.206,30.6 36.191,31.557 36.191,32.92 C36.191,34.312 37.003,34.95 40.57,36.023 C44.659,37.27 47.066,38.343 47.066,42.026 Z"></path>
+								</g>
+							</svg>
+							<p class="cbx-title">Recibe dinero en tu celular</p>
+							<p class="cbx-text">Podrán depositarte a tu número de celular desde <span m-font="bold">Oxxo, 7-Eleven, Soriana</span> o en cualquier sucursal bancaria con tu número de Cuenta CLABE</p>
+							<a class="cbx-link trx-link" href="#" m-mody="cta">
+								Conoce los límites de tu cuenta
+								<span class="cbx-icon" m-size="20" m-mody="icon-bold">
+									<i class="icon-arrow-right-o"></i>
+								</span>
+							</a>
+							<a class="cbx-link trx-link" href="#" m-mody="cta">
+								Descubre nuestra Red Transfer
+								<span class="cbx-icon" m-size="20" m-mody="icon-bold">
+									<i class="icon-arrow-right-o"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</article>
+				<article class="cbx-card trx-card" m-mody="c-img c-img-half">
+					<figure class="cbx-img">
+						<img src="/transfer/assets/img/index/Card2-x2.jpg" alt="">
+					</figure>
+					<div class="card-content">
+						<div class="card-description">
+							<svg class="cbx-svg-icon" m-size="25" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<g>
+									<path d="M65.6385542,13.9759036 L65.6385542,22.6506024 L74.9879518,22.6506024 C76.1171787,22.6506024 77.1084337,21.6593473 77.1084337,20.5301205 L77.1084337,5.01204819 C77.1084337,3.88282133 76.1171787,2.89156627 74.9879518,2.89156627 L5.01204819,2.89156627 C3.88282133,2.89156627 2.89156627,3.88282133 2.89156627,5.01204819 L2.89156627,20.5301205 C2.89156627,21.6593473 3.88282133,22.6506024 5.01204819,22.6506024 L13.3975904,22.6506024 L13.3975904,13.9759036 L9.73493976,13.9759036 L9.73493976,11.0843373 L70.2650602,11.0843373 L70.2650602,13.9759036 L65.6385542,13.9759036 Z M62.746988,13.9759036 L16.2891566,13.9759036 L16.2891566,73.9277108 C16.2891566,75.2497088 17.3767972,76.3373494 18.6987952,76.3373494 L60.3373494,76.3373494 C61.6593473,76.3373494 62.746988,75.2497088 62.746988,73.9277108 L62.746988,13.9759036 Z M65.6385542,25.5421687 L65.6385542,73.9277108 C65.6385542,76.8466767 63.2563153,79.2289157 60.3373494,79.2289157 L18.6987952,79.2289157 C15.7798293,79.2289157 13.3975904,76.8466767 13.3975904,73.9277108 L13.3975904,25.5421687 L5.01204819,25.5421687 C2.28585337,25.5421687 0,23.2563153 0,20.5301205 L0,5.01204819 C0,2.28585337 2.28585337,-1.7408297e-13 5.01204819,-1.7408297e-13 L74.9879518,-1.7408297e-13 C77.7141466,-1.7408297e-13 80,2.28585337 80,5.01204819 L80,20.5301205 C80,23.2563153 77.7141466,25.5421687 74.9879518,25.5421687 L65.6385542,25.5421687 Z M47.066,49.026 C47.066,52.361 45.152,54.449 41.324,54.942 L41.324,57.9 L38.279,57.9 L38.279,54.942 C35.872,54.623 33.668,53.434 32.334,51.723 L34.654,49.751 C36.133,51.346 37.873,52.1 39.787,52.1 C42.687,52.1 43.963,51.143 43.963,49.345 C43.963,47.75 42.832,47.054 39.439,46.039 C35.118,44.763 33.088,43.69 33.088,40.181 C33.088,37.165 35.321,35.251 38.279,34.787 L38.279,31.8 L41.324,31.8 L41.324,34.787 C43.354,35.106 45.007,36.034 46.428,37.455 L44.311,39.601 C42.89,38.354 41.643,37.6 39.555,37.6 C37.206,37.6 36.191,38.557 36.191,39.92 C36.191,41.312 37.003,41.95 40.57,43.023 C44.659,44.27 47.066,45.343 47.066,49.026 Z"></path>
+								</g>
+							</svg>
+							<p class="cbx-title">Retira efectivo con tu celular</p>
+							<p class="cbx-text">Retira dinero con tu NIP en cualquier cajero Citibanamex sin costo</p>
+							<a class="cbx-link trx-link" href="#" m-mody="cta">
+								Descubre cómo
+								<span class="cbx-icon" m-size="20" m-mody="icon-bold">
+									<i class="icon-arrow-right-o"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</article>
+				<article class="cbx-card trx-card" m-mody="c-img c-img-half">
+					<figure class="cbx-img">
+						<img src="/transfer/assets/img/index/Card3-x2.jpg" alt="">
+					</figure>
+					<div class="card-content">
+						<div class="card-description">
+							<svg class="cbx-svg-icon" m-size="25" viewBox="0 0 76 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<g transform="translate(-4.000000, -19.000000)">
+									<path d="M68.0618888,21.2513089 L29.9381112,21.2513089 C29.3947457,26.3448605 25.3359193,30.4006048 20.2409639,30.9392098 L20.2409639,49.0607902 C25.6652309,49.6342079 29.9151003,54.1941177 29.9987436,59.7486911 L68.0012564,59.7486911 C68.0848997,54.1941177 72.3347691,49.6342079 77.7590361,49.0607902 L77.7590361,30.9392098 C72.6640807,30.4006048 68.6052543,26.3448605 68.0618888,21.2513089 Z M70.246212,21.2513089 C70.767809,25.1461366 73.8627884,28.2381275 77.7590361,28.7551671 L77.7590361,21.2513089 L70.246212,21.2513089 Z M20.2409639,51.2448329 L20.2409639,58.8313253 L27.7644528,58.8313253 C27.275864,54.8976625 24.1647265,51.7655238 20.2409639,51.2448329 Z M77.7590361,51.2448329 C73.8352735,51.7655238 70.724136,54.8976625 70.2355472,58.8313253 L77.7590361,58.8313253 L77.7590361,51.2448329 Z M27.753788,21.2513089 L20.2409639,21.2513089 L20.2409639,28.7551671 C24.1372116,28.2381275 27.232191,25.1461366 27.753788,21.2513089 Z M80,19 L80,62 L18,62 L18,19 L80,19 Z M55.066,45.4439104 C55.066,48.7789104 53.152,50.8669104 49.324,51.3599104 L49.324,54.3179104 L46.279,54.3179104 L46.279,51.3599104 C43.872,51.0409104 41.668,49.8519104 40.334,48.1409104 L42.654,46.1689104 C44.133,47.7639104 45.873,48.5179104 47.787,48.5179104 C50.687,48.5179104 51.963,47.5609104 51.963,45.7629104 C51.963,44.1679104 50.832,43.4719104 47.439,42.4569104 C43.118,41.1809104 41.088,40.1079104 41.088,36.5989104 C41.088,33.5829104 43.321,31.6689104 46.279,31.2049104 L46.279,28.2179104 L49.324,28.2179104 L49.324,31.2049104 C51.354,31.5239104 53.007,32.4519104 54.428,33.8729104 L52.311,36.0189104 C50.89,34.7719104 49.643,34.0179104 47.555,34.0179104 C45.206,34.0179104 44.191,34.9749104 44.191,36.3379104 C44.191,37.7299104 45.003,38.3679104 48.57,39.4409104 C52.659,40.6879104 55.066,41.7609104 55.066,45.4439104 Z M8,37 L14,37 C14.5522847,37 15,37.4477153 15,38 C15,38.5522847 14.5522847,39 14,39 L8,39 C7.44771525,39 7,38.5522847 7,38 C7,37.4477153 7.44771525,37 8,37 Z M5,43 L11,43 C11.5522847,43 12,43.4477153 12,44 C12,44.5522847 11.5522847,45 11,45 L5,45 C4.44771525,45 4,44.5522847 4,44 C4,43.4477153 4.44771525,43 5,43 Z"></path>
+								</g>
+							</svg>
+							<p class="cbx-title">Envía dinero a tus contactos</p>
+							<p class="cbx-text">Envía dinero a otros números celulares, Cuentas CLABE y tarjetas de otros bancos nacionales</p>
+							<a class="cbx-link trx-link" href="#" m-mody="cta">
+								Te decimos cómo
+								<span class="cbx-icon" m-size="20" m-mody="icon-bold">
+									<i class="icon-arrow-right-o"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+		<div class="cbx-wrapper benefits-money">
+			<p class="cbx-headline-section">Tu dinero está seguro y disponible en todo momento</p>		
+			<div class="money-cards">
+				<article class="cbx-card trx-card">
+					<div class="card-content">
+						<div class="card-description">
+							<p class="cbx-category">PROTECCIÓN</p>
+							<p class="cbx-title">Autoriza todas tus operaciones con el NIP Transfer</p>	
+							<ul class="cbx-list cbx-text">
+								<li class="list-item">- Retiro en cajeros y Sucursales Citibanamex sin tarjeta</li>
+								<li class="list-item">- Envío de dinero</li>
+								<li class="list-item">- Pago de servicios</li>
+								<li class="list-item">- Cambio de NIP</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+				<article class="cbx-card trx-card">
+					<div class="card-content">
+						<div class="card-description">
+							<p class="cbx-category">CONTROL</p>
+							<p class="cbx-title">Recibe mensajes y notificaciones</p>	
+							<ul class="cbx-list cbx-text">
+								<li class="list-item">- Depósito a tu cuenta</li>
+								<li class="list-item">- Retiro de tu cuenta</li>
+								<li class="list-item">- Envío de dinero a otra cuenta - Compra/monto realizado</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+				<article class="cbx-card trx-card">
+					<div class="card-content">
+						<div class="card-description">
+							<p class="cbx-category">ACCESIBILIDAD</p>
+							<p class="cbx-title">Consulta tu cuenta en tiempo real las 24 horas del día, los 7 días de la semana.</p>	
+							<ul class="cbx-list cbx-text">
+								<li class="list-item">- Consulta de saldo y movimientos</li>
+								<li class="list-item">- Datos de la cuenta</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+	<section m-desk="saldazo" class="cbx-wrapper">
+		<p class="cbx-headline-section">El dinero de tu Cuenta Transfer, disponible también en la Tarjeta Saldazo</p>
+		<figure class="cbx-img">
+			<img src="/transfer/assets/img/index/Mockup-Tarjeta.png" alt="">
+		</figure>
+		<div class="saldazo-description">
+			<p class="cbx-title">Utilizala para:</p>
+			<ul class="cbx-list cbx-text">
+				<li class="list-item">- Compras en Amazon, Linio y tiendas en línea</li>
+				<li class="list-item">- Viajes con descuentos en Uber Lite</li>
+				<li class="list-item">- Preventas Citibanamex en Ticketmaster</li>
+				<li class="list-item">- Promociones exclusivas en Oxxo y retiros con costo preferencial.</li>
+				<li class="list-item">- Pagos en comercios que aceptan Visa</li>
+			</ul>
+			<p class="cbx-title">¿Cómo la obtengo?</p>
+			<div class="cbx-steps">
+				<article class="steps-info">
+					<div class="steps-content">
+						<ul class="cbx-list-square trx-list-square">
+							<li class="list-item">
+								<div class="cbx-bullet-list" m-theme="gray">
+									<p class="cbx-hightlight">1</p>
+								</div>
+								<div class="text-content">
+									<p class="cbx-text">Solicita tu tarjeta en la App Transfer</p>
+								</div>
+							</li>
+							<li class="list-item">
+								<div class="cbx-bullet-list" m-theme="gray">
+									<p class="cbx-hightlight">2</p>
+								</div>
+								<div class="text-content">
+									<p class="cbx-text">Recógela* en Oxxo o Citibanamex con tu credencial INE y $50** pesos.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</article>
+			</div>
+			<div class="saldazo-legal">
+				<p class="cbx-legal">*De no recogerla dentro de los 10 días deberás solicitar un nuevo folio desde la app.</p>
+				<p class="cbx-legal">**Único costo por afiliación al Programa de Lealtad.</p>
+			</div>
+		</div>
+	</section>
+	<section m-desk="faqs" data-section="PreguntasFrecuentes">
+		<div class="cbx-wrapper">
+			<h2 class="cbx-headline-section" m-font="bold">Preguntas Frecuentes</h2>
+			<div class="cbx-faqs trx-faqs">
+				<article m-drop-down="m-drop-down" m-open="true">
+					<div class="content-items">
+						<button class="cbx-text head-faqs" type="button" m-open="true" aria-controls="">
+							¿Cómo abro mi Cuenta Transfer Citibanamex y que necesito?
+							<span class="cbx-icon" m-size="15" m-mody="flat">
+								<i class="icon-angle-down-s"></i>
+							</span>
+						</button>
+						<div class="answer-faqs">
+							<p class="cbx-text">
+								Solo necesitas descargar la app Transfer, validar tu número de celular, capturar tus datos personales y generar tu NIP de seguridad (contraseña a 6 dígitos para autorizar todas tus operaciones).
+							</p>
+						</div>
+					</div>
+					<div class="content-items">
+						<button class="cbx-text head-faqs" type="button" m-open="false" aria-controls="">
+							¿Qué riesgos existen al utilizar la app Transfer?
+							<span class="cbx-icon" m-size="15" m-mody="flat">
+								<i class="icon-angle-down-s"></i>
+							</span>
+						</button>
+						<div class="answer-faqs">
+							<p class="cbx-text">Ninguno ya que con tu NIP de Seguridad Transfer de 6 dígitos autorizas todas tus operaciones. El NIP no queda guardado en tu celular, solo tú lo conoces.</p>
+						</div>
+					</div>
+					<div class="content-items">
+						<button class="cbx-text head-faqs" type="button" m-open="false" aria-controls="">
+							Si pierdo mi celular, ¿cualquier persona puede acceder a mi cuenta? 
+							<span class="cbx-icon" m-size="15" m-mody="flat">
+								<i class="icon-angle-down-s"></i>
+							</span>
+						</button>
+						<div class="answer-faqs">
+							<p class="cbx-text">No, porque para hacer las transacciones necesitas tu NIP Transfer de 6 dígitos. Recuerda que, si pierdes tu teléfono celular, por seguridad deberás comunicarte al CAT Transfer | Citibanamex marcando <a href="tel:*4444" class="cbx-link trx-link" m-mody="phone">*4444</a> desde números Telcel o bien al <a href="tel:015546312669" class="cbx-link trx-link" m-mody="phone">01 55 4631 2669.</a></p>
+						</div>
+					</div>
+					<div class="content-items">
+						<button class="cbx-text head-faqs" type="button" m-open="false" aria-controls="">
+							¿Qué pasa si cambio el número de mi celular?
+							<span class="cbx-icon" m-size="15" m-mody="flat">
+								<i class="icon-angle-down-s"></i>
+							</span>
+						</button>
+						<div class="answer-faqs">
+							<p class="cbx-text">Si cambias tu número celular comunícate al CAT Transfer | Citibanamex marcando <a href="tel:*4444" class="cbx-link trx-link" m-mody="phone">*4444</a> desde números Telcel o bien al <a href="tel:015546312669" class="cbx-link trx-link" m-mody="phone">01 55 4631 2669</a> para volver a utilizar el App Transfer ya que tu Cuenta Transfer Citibanamex está asociado a tu número celular.  Si solo cambias de equipo podrás seguir utilizando el servicio desde tu nuevo dispositivo móvil.</p>
+						</div>
+					</div>
+					<div class="content-items">
+						<button class="cbx-text head-faqs" type="button" m-open="false" aria-controls="">
+							Si olvido mi NIP Transfer ¿Cómo lo recupero?
+							<span class="cbx-icon" m-size="15" m-mody="flat">
+								<i class="icon-angle-down-s"></i>
+							</span>
+						</button>
+						<div class="answer-faqs">
+							<p class="cbx-text">Si eres cliente Telcel marca al <a href="tel:*4444" class="cbx-link trx-link" m-mody="phone">*4444</a> y si eres de otra compañía comunícate al <a href="tel:015546312669" class="cbx-link trx-link" m-mody="phone">01 55 4631 2669</a> de lunes a domingo de 08:00 a 22:00 horas.</p>
+						</div>
+					</div>
+				</article>
+				<article class="cbx-card" m-mody="c-phone">
+					<div class="card-content">
+						<div class="card-head">
+							<h2 class="cbx-title">Por robo o extravío de tu celular</h2>
+						</div>
+						<div class="card-body">
+							<div class="item">
+								<p class="cbx-text">Marca las 24h al:</p>
+								<a class="cbx-link trx-link" href="tel:015546312669" m-mody="phone">01 (55) 4631 2669</a>
+							</div>
+							<div class="item">
+								<p class="cbx-text" m-font="bold">¿Tienes más dudas de tu app?</p>
+								<p class="cbx-text">Marca al <a class="cbx-link trx-link" href="tel:*4444" m-mody="phone">*4444</a> desde tu Telcel</p>
+								<p class="cbx-text">De lunes a domingo de 8:00 a 22:00 h</p>
+							</div>
+							<div class="item">
+								<a class="cbx-link trx-link" href="" m-mody="mail">Ir al centro de ayuda</a>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+	<section m-desk="legals" class="cbx-wrapper">
+		<div class="legals-links">
+			<div class="link-content">
+				<a href="" class="cbx-link trx-link">Aviso legal</a>
+			</div>
+			<div class="link-content">
+				<a href="" class="cbx-link trx-link">Comisiones</a>
+			</div>
+			<div class="link-content">
+				<a href="" class="cbx-link trx-link">Contrato</a>
+			</div>
+			<div class="link-content">
+				<a href="" class="cbx-link trx-link">Seguridad</a>
+			</div>
+		</div>
+		<p class="cbx-legal">
+			Cuenta Transfer Banamex es un producto ofrecido por Banco Nacional de México, S.A. Integrante del Grupo Financiero Banamex cuyos requisitos de contrato y comisiones se encuentran a tu disposición en cualquier Sucursal Citibanamex, <a class="cbx-link trx-link" m-font="inherit-size" href="https://www.citibanamex.com/" target="_blank">www.citibanamex.com</a> o en éste sitio.
+		</p>
+	</section>
+	<footer id="trx-footer-main" class="trx-footer">
+		<div class="cbx-wrapper">
+			<div class="footer-links">
+				<a href="/es/buro_de_entidades_financieras.htm">
+					<figure class="cbx-img">
+						<img src="/assets/img/buro.png" alt="Buró de crédito citibanamex">
+					</figure>
+				</a>
+				<a class="cbx-text" href="" m-exit='{"sponsor":"IPAB", "path": "https://www.gob.mx/ipab", "extra":""}'>
+					IPAB
+				</a>
+			</div>
+			<ul class="footer-socials">
+				<li>
+					<button m-exit='{"sponsor":"Facebook", "path": "https://www.facebook.com/Citibanamex", "extra":"La marca Facebook y su logotipo, son marcas registradas de Facebook, Inc., en los Estados Unidos y en otros países."}'>
+						<svg class="cbx-svg-icon" m-size="25" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g>
+								<path d="M17.7586207,15 C16.2353448,15 15,16.2353448 15,17.7586207 L15,62.2413793 C15,63.7646552 16.2353448,65 17.7586207,65 L41.7241379,65 L41.7241379,45.6637931 L35.2155172,45.6637931 L35.2155172,38.0948276 L41.7241379,38.0948276 L41.7241379,32.5258621 C41.7241379,26.0689655 45.6724138,22.5517241 51.4310345,22.5517241 C53.3715517,22.5474138 55.3112069,22.6456897 57.2413793,22.8448276 L57.2413793,29.5948276 L53.2767241,29.5948276 C50.137931,29.5948276 49.5258621,31.0775862 49.5258621,33.2672414 L49.5258621,38.0862069 L57.0258621,38.0862069 L56.0517241,45.6551724 L49.4827586,45.6551724 L49.4827586,65 L62.2413793,65 C63.7655172,65 65,63.7646552 65,62.2413793 L65,17.7586207 C65,16.2353448 63.7655172,15 62.2413793,15 L17.7586207,15 Z"></path>
+							</g>
+						</svg>
+					</button>
+				</li>
+				<li>
+					<button m-exit='{"sponsor":"Twitter", "path": "https://twitter.com/Citibanamex", "extra":"Twitter y el logotipo de Twitter son marcas comerciales de Twitter, Inc. o de sus afiliadas."}'>
+						<svg class="cbx-svg-icon" m-size="25" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g>
+								<path d="M30.7246,59.9419407 C49.5934,59.9419407 59.9118,44.5765861 59.9118,31.2529731 C59.9118,30.8163557 59.9028,30.3817042 59.8824,29.9494117 C61.8852,28.5263259 63.6264,26.750565 65,24.7286785 C63.1618,25.5311424 61.1838,26.0721469 59.1088,26.3161101 C61.2268,25.0679859 62.8528,23.0926902 63.6198,20.7383768 C61.637,21.8933193 59.4426,22.7335277 57.106,23.1856754 C55.234,21.22591 52.5682,20 49.6182,20 C43.9526,20 39.3582,24.5157759 39.3582,30.0825004 C39.3582,30.8739554 39.4484,31.6431962 39.6244,32.3815731 C31.099,31.9602894 23.5388,27.9477735 18.48,21.8467284 C17.5982,23.3364568 17.0906,25.0679859 17.0906,26.9147143 C17.0906,30.4129613 18.9018,33.5011301 21.6556,35.307755 C19.973,35.2568392 18.392,34.8023325 17.0096,34.0462629 C17.0072,34.0883323 17.0072,34.1305983 17.0072,34.1748301 C17.0072,39.0588115 20.5438,43.135611 25.2372,44.0601548 C24.3756,44.2905535 23.469,44.4149924 22.533,44.4149924 C21.8722,44.4149924 21.2292,44.3505122 20.6046,44.2329538 C21.9106,48.2389824 25.6972,51.1541555 30.1878,51.2363284 C26.6762,53.9409579 22.2534,55.5525696 17.447,55.5525696 C16.6194,55.5525696 15.803,55.5059787 15,55.412797 C19.54,58.2727294 24.9304,59.9419407 30.7246,59.9419407"></path>
+							</g>
+						</svg>
+					</button>
+				</li>
+				<li>
+					<button m-exit='{"sponsor":"LinkedIn", "path": "https://www.linkedin.com/company/Citibanamex", "extra":"LinkedIn y el logotipo de LinkedIn son marcas registradas de LinkedIn Corporation y sus afiliadas, en los Estados Unidos y/o en otros países"}'>
+						<svg class="cbx-svg-icon" m-size="25" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g>
+								<path d="M62.1444794,53.066337 C62.598713,53.066337 62.9713265,53.0273013 62.9713265,52.5411294 C62.9713265,52.1176512 62.6022617,52.0644207 62.2769642,52.0644207 L61.6500272,52.0644207 L61.6500272,53.066337 L62.1444794,53.066337 Z M62.6365658,53.3644278 L62.5809695,53.3727081 L63.4539497,54.6928245 L63.000899,54.6928245 L62.1858809,53.4176583 L62.1752348,53.4010977 L61.6500272,53.4010977 L61.6500272,54.6928245 L61.226549,54.6928245 L61.226549,51.7272942 L62.3538527,51.7272942 C63.0564953,51.7272942 63.3995363,52.0005441 63.3995363,52.5647874 C63.3995363,53.0273013 63.1369325,53.302917 62.6365658,53.3644278 Z M62.1929783,55.6509735 C63.5367527,55.6509735 64.5883508,54.5910951 64.5883508,53.2141995 C64.5883508,51.8384868 63.5367527,50.7762426 62.1929783,50.7762426 C60.8515697,50.7762426 59.7976058,51.8384868 59.7976058,53.2141995 C59.7976058,54.5910951 60.8515697,55.6509735 62.1929783,55.6509735 Z M62.1929783,50.4095436 C63.7662353,50.4095436 65,51.6409425 65,53.2141995 C65,54.7886394 63.7662353,56.0188554 62.1929783,56.0188554 C60.6185384,56.0188554 59.3847737,54.7886394 59.3847737,53.2141995 C59.3847737,51.6409425 60.6185384,50.4095436 62.1929783,50.4095436 Z M51.2878232,55.2866403 L51.2878232,44.1413565 C51.2878232,38.6680783 50.1061061,34.460503 43.7101658,34.460503 C40.6381745,34.460503 38.5775628,36.1449526 37.735338,37.7430505 L37.6478034,37.7430505 L37.6478034,34.9644184 L31.5937212,34.9644184 L31.5937212,55.2866403 L37.9021269,55.2866403 L37.9021269,45.235539 C37.9021269,42.5834773 38.4036765,40.0154014 41.6909555,40.0154014 C44.9321015,40.0154014 44.9723201,43.0471741 44.9723201,45.4035108 L44.9723201,55.2866403 L51.2878232,55.2866403 Z M24.4726632,32.1881521 C26.4930564,32.1881521 28.1325558,30.5474698 28.1325558,28.5247108 C28.1325558,26.5031347 26.4930564,24.8624524 24.4726632,24.8624524 C22.4439897,24.8624524 20.808039,26.5031347 20.808039,28.5247108 C20.808039,30.5474698 22.4439897,32.1881521 24.4726632,32.1881521 Z M21.3095886,55.2866403 L27.6321891,55.2866403 L27.6321891,34.9644184 L21.3095886,34.9644184 L21.3095886,55.2866403 Z M54.4331543,19 C56.1696515,19 57.583217,20.3745298 57.583217,22.0708084 L57.583217,58.5112257 C57.583217,60.2075043 56.1696515,61.5843999 54.4331543,61.5843999 L18.1405995,61.5843999 C16.407651,61.5843999 15,60.2075043 15,58.5112257 L15,22.0708084 C15,20.3745298 16.407651,19 18.1405995,19 L54.4331543,19 Z"></path>
+							</g>
+						</svg>
+					</button>
+				</li>
+				<li>
+					<button m-exit='{"sponsor":"youtube", "path": "https://www.youtube.com/Citibanamex", "extra":"© 2015 Google Inc. Todos los derechos reservados. Youtube y su logotipo, son marcas comerciales de Google Inc."}'>
+						<svg class="cbx-svg-icon" m-size="25" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g>
+								<path d="M63.9551136,27.5008523 C65,31.4252841 65,39.6136364 65,39.6136364 C65,39.6136364 65,47.8017045 63.9551136,51.7264205 C63.3801136,53.8917614 61.6857955,55.596875 59.5346591,56.1758523 C55.6355114,57.2272727 40,57.2272727 40,57.2272727 C40,57.2272727 24.3644886,57.2272727 20.4653409,56.1758523 C18.3142045,55.596875 16.6198864,53.8917614 16.0448864,51.7264205 C15,47.8017045 15,39.6136364 15,39.6136364 C15,39.6136364 15,31.4252841 16.0448864,27.5008523 C16.6198864,25.3355114 18.3142045,23.6303977 20.4653409,23.0517045 C24.3644886,22 40,22 40,22 C40,22 55.6355114,22 59.5346591,23.0517045 C61.6857955,23.6303977 63.3801136,25.3355114 63.9551136,27.5008523 Z M34.8863636,47.0480114 L47.9545455,39.6139205 L34.8863636,32.1792614 L34.8863636,47.0480114 Z"></path>
+							</g>
+						</svg>
+					</button>
+				</li>
+			</ul>
+		</div>
+		<div class="cbx-exit trx-exit" m-visible="false">
+			<div class="exit-main">
+				<div class="exit-description">
+					<p class="cbx-legal"></p>
+					<p class="cbx-legal"></p>
+					<p class="cbx-legal"></p>
+				</div>
+				<div class="exit-cta">
+					<a class="cbx-link" href="#" m-mody="cta" target="_blank" rel="noopener">
+						Continuar
+						<span class="cbx-icon" m-size="20" m-mody="icon-bold">
+							<i class="icon-arrow-right-o"></i>
+						</span>
+					</a>
+				</div>
+			</div>
+			<button class="cbx-icon" m-size="30" m-mody="fill circle" aria-label="Cerrar modal"><i class="icon-close-o"></i></button>
+		</div>
+	</footer>
 	<script src="/assets/js/bootstrap-bundle-min.js"></script>
-    <script src="/transfer/assets/js/trx-components-transfer.bundle.js"></script>
+	<script src="/transfer/assets/js/trx-components-transfer.bundle.js"></script>
+	<script src="/transfer/assets/js/trx-header-footer-transfer.bundle.js"></script>
 </body>
 </html>

@@ -1,0 +1,148 @@
+@import "../../config/mixins.pcss";
+
+.trx-footer{
+	@mixin viewport xs, height, 100;
+	background-color: var(--black);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	& > .cbx-wrapper{
+		padding: {
+			top: 0;
+			bottom: 0;
+		}
+	}
+	& .footer-links{
+		& > a{
+			&:first-child{
+				@mixin viewport xs, margin-right, 40;
+				@mixin viewport xs, height, 25;
+				@mixin viewport xs, width, 25;
+				display: inline-flex;
+			}
+		}
+		& > .cbx-text {
+			color: var(--white);
+		}
+	}
+	& .footer-socials{
+		display: flex;
+		justify-content: center;
+		& li{
+			@mixin viewport xs, margin-right, 10;
+			&:last-child{
+				margin-right: 0;
+			}
+			& button{
+				display: flex;
+			}
+			& .cbx-svg-icon{
+				fill: var(--white);
+			}
+		}
+	}
+}
+
+@media (--max-mobile){
+	.trx-footer{
+		& > .cbx-wrapper{
+			flex-wrap: wrap;
+			& > *{
+				flex-grow: 1;
+				flex-shrink: 1;
+				flex-basis: 100%;
+			}
+		}
+		& .footer-links{
+			@mixin viewport xs, margin-bottom, 15;
+			text-align: center;
+		}
+	}
+}
+
+@media (--portrait){
+	.trx-footer{
+		height: 60px;
+		& > .cbx-wrapper{
+			display: flex;
+			justify-content: space-between;
+		}
+		& .footer-links{
+			& > a{
+				&:first-child{
+					margin-right: 40px;
+					height: 25px;
+					width: 25px;
+				}
+			}
+		}
+		& .footer-socials{
+			& li{
+				margin-right: 10px;
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (--small-desktop){
+	.trx-footer{
+		@mixin viewport lg, height, 60;
+		& .footer-links{
+			& > a{
+				&:first-child{
+					@mixin viewport lg, margin-right, 40;
+					@mixin viewport lg, height, 25;
+					@mixin viewport lg, width, 25;
+				}
+			}
+		}
+		& .footer-socials{
+			& li{
+				@mixin viewport lg, margin-right, 10;
+			}
+		}
+	}
+}
+
+@media (--large-desktop){
+	.trx-footer{
+		@mixin viewport xl, height, 60;
+		& .footer-links{
+			& > a{
+				&:first-child{
+					@mixin viewport xl, margin-right, 40;
+					@mixin viewport xl, height, 25;
+					@mixin viewport xl, width, 25;
+				}
+			}
+		}
+		& .footer-socials{
+			& li{
+				@mixin viewport xl, margin-right, 10;
+			}
+		}
+	}
+}
+
+@media (--full){
+	.trx-footer{
+		@mixin viewport xxl, height, 60;
+		& .footer-links{
+			& > a{
+				&:first-child{
+					@mixin viewport xxl, margin-right, 40;
+					@mixin viewport xxl, height, 25;
+					@mixin viewport xxl, width, 25;
+				}
+			}
+		}
+		& .footer-socials{
+			& li{
+				@mixin viewport xxl, margin-right, 10;
+			}
+		}
+	}
+}

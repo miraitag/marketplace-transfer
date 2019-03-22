@@ -1,5 +1,27 @@
 @import "../../config/mixins.pcss";
 
+html{
+	&:not([m-browser~=mobile]){
+		& .trx-link{
+			&:hover{
+				color: var(--tr-blue);
+				& .cbx-icon{
+					color: var(--tr-blue);
+				}
+			}
+		}
+	}
+}
+
+
 .trx-link{
-    color: var(--b1);
+    color: var(--tr-blue);
+	&::after{
+		background-color: var(--tr-blue);
+	}
+	&[m-mody=cta]{
+		& .cbx-icon{
+			color: inherit;
+		}
+	}
 }

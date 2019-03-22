@@ -1,0 +1,359 @@
+@import "../../config/mixins.pcss";
+
+[m-desk=benefits]{
+	& .cbx-wrapper{
+		& [class*=cards]{
+			& > .trx-card{
+				& .card-description{
+					& .cbx-svg-icon{
+						fill: var(--tr-red);
+					}
+					& span[m-font] {
+						display: inline-block;
+					}
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	& .benefits-cuentas{
+		& .cuenta-cards{		
+			& > .trx-card{
+				@mixin box-shadow xs, medium-out;
+			}
+		}
+	}
+
+	& .benefits-money{
+		& .money-cards{
+			& > .trx-card{
+				border-bottom:{
+					@mixin viewport xs, width, 5;
+					style: solid;
+					color: var(--tr-blue);
+				}
+			}
+		}
+	}
+}
+
+[m-desk=saldazo]{
+	& > .cbx-img{
+		background-color: transparent;
+	}
+	& .saldazo-description{
+		& > * {
+			@mixin viewport xs, margin-bottom, 20;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		& > .cbx-text{
+			@mixin viewport xs, padding-bottom, 20;
+			border-bottom:{
+				width: 2px;
+				style: solid;
+				color: var(--background-gray);
+			}
+			& li {
+				@mixin viewport xs, margin-bottom, 10;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+		& .steps-info{
+			background-color: transparent;
+		}
+		& .steps-content{
+			padding: 0;
+			& .cbx-list-square{
+				& .list-item{
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (--max-mobile){
+	[m-desk=benefits]{
+		& .cbx-wrapper{
+			& [class*=cards]{
+				& > .trx-card{
+					@mixin viewport xs, margin-bottom, 20;
+				}
+			}
+		}
+	}
+
+	[m-desk=saldazo]{
+		& > .cbx-img{
+			@mixin viewport xs, margin-bottom, 20;
+		}
+	}
+
+}
+
+@media (--max-portrait){
+	[m-desk=benefits]{
+		& .cbx-wrapper{
+			& [class*=cards]{
+				& > .trx-card{
+					flex-grow: 1;
+					flex-shrink: 0;
+					flex-basis: calc(100% / 3 - 20px);
+					margin-right: 20px;
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		& .benefits-cuentas{
+			& .cuenta-cards{
+				& > .trx-card{
+					min-height: auto;
+					& > .cbx-img{
+						display: none;
+					}
+					& .card-content{
+						margin-top: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (--portrait){
+	[m-desk=benefits]{
+		& .cbx-wrapper{
+			& [class*=cards]{
+				display: flex;
+			}
+		}
+
+		& .benefits-cuentas{
+			& .cuenta-cards{
+				& > .trx-card{
+					@mixin box-shadow sm, medium-out; 
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		& .benefits-money{
+			& .money-cards{
+				& > .trx-card{
+					border-bottom-width: 5px
+				}
+			}
+		}
+	}
+
+	[m-desk=saldazo]{
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		& > .cbx-headline-section, & > .cbx-img, & .saldazo-description{
+			flex-grow: 1;
+			flex-shrink: 0;
+		}
+
+		& > .cbx-img, & .saldazo-description{
+			flex-basis: calc(100% / 2 - 20px);
+		}
+
+		& > .cbx-headline-section{
+			flex-basis: 100%;
+		}
+		& > .cbx-img{
+			margin-right: 20px;
+		}
+		& .saldazo-description{
+			& > * {
+				margin-bottom: 20px;
+			}
+			& > .cbx-text{
+				padding-bottom: 20px;
+				& li {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media (--small-desktop){
+	[m-desk=benefits]{
+		& .cbx-wrapper{
+			& [class*=cards]{
+				& > .trx-card{
+					&:hover{
+						@mixin box-shadow lg, medium-out; 
+					}
+				}
+			}
+		}
+
+		& .benefits-cuentas{
+			& .cuenta-cards{
+				display: block;
+				& > .trx-card{
+					@mixin viewport lg, margin-bottom, 20;
+					&:nth-child(2){
+						flex-direction: row-reverse;
+					}
+				}
+			}
+		}
+
+		& .benefits-money{
+			& .money-cards{
+				& > .trx-card{
+					@mixin viewport lg, border-bottom-width, 5; 
+					@mixin viewport lg, margin-right, 20; 
+					flex-basis: calc(100% / 3 - 1.95vw);
+				}
+			}
+		}
+	}
+
+	[m-desk=saldazo]{
+		& > .cbx-img, & .saldazo-description{
+			flex-basis: calc(100% / 2 - 1.95vw);
+		}
+
+		& > .cbx-img{
+			@mixin viewport lg, margin-right, 20;
+		}
+		& .saldazo-description{
+			& > * {
+				@mixin viewport lg, margin-bottom, 20;
+			}
+			& > .cbx-text{
+				@mixin viewport lg, padding-bottom, 20;
+				& li {
+					@mixin viewport lg, margin-bottom, 10;
+				}
+			}
+		}
+	}
+}
+
+@media (--large-desktop){
+	[m-desk=benefits]{
+		& .cbx-wrapper{
+			& [class*=cards]{
+				& > .trx-card{
+					&:hover{
+						@mixin box-shadow xl, medium-out; 
+					}
+				}
+			}
+		}
+
+		& .benefits-cuentas{
+			& .cuenta-cards{
+				display: block;
+				& > .trx-card{
+					@mixin viewport xl, margin-bottom, 20;
+					
+				}
+			}
+		}
+		
+		& .benefits-money{
+			& .money-cards{
+				& > .trx-card{
+					@mixin viewport xl, border-bottom-width, 5; 
+					@mixin viewport xl, margin-right, 20; 
+				}
+			}
+		}
+	}
+
+	[m-desk=saldazo]{
+		& > .cbx-img, & .saldazo-description{
+			flex-basis: calc(100% / 2 - 1.25vw);
+		}
+
+		& > .cbx-img{
+			@mixin viewport xl, margin-right, 20;
+		}
+		& .saldazo-description{
+			& > * {
+				@mixin viewport xl, margin-bottom, 20;
+			}
+			& > .cbx-text{
+				@mixin viewport xl, padding-bottom, 20;
+				& li {
+					@mixin viewport xl, margin-bottom, 10;
+				}
+			}
+		}
+	}
+
+}
+
+@media (--full){
+	[m-desk=benefits]{
+		& .cbx-wrapper{
+			& [class*=cards]{
+				& > .trx-card{
+					&:hover{
+						@mixin box-shadow xxl, medium-out; 
+					}
+				}
+			}
+		}
+
+		& .benefits-cuentas{
+			& .cuenta-cards{
+				display: block;
+				& > .trx-card{
+					@mixin viewport xxl, margin-bottom, 20;
+				}
+			}
+		}
+
+		& .benefits-money{
+			& .money-cards{
+				& > .trx-card{
+					@mixin viewport xxl, border-bottom-width, 5; 
+					@mixin viewport xxl, margin-right, 20; 
+				}
+			}
+		}
+	}
+
+	[m-desk=saldazo]{
+		& > .cbx-img, & .saldazo-description{
+			flex-basis: calc(100% / 2 - 1.25vw);
+		}
+
+		& > .cbx-img{
+			@mixin viewport xxl, margin-right, 20;
+		}
+		& .saldazo-description{
+			& > * {
+				@mixin viewport xxl, margin-bottom, 20;
+			}
+			& > .cbx-text{
+				@mixin viewport xxl, padding-bottom, 20;
+				& li {
+					@mixin viewport xxl, margin-bottom, 10;
+				}
+			}
+		}
+	}
+}

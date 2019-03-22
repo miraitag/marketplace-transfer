@@ -1,7 +1,18 @@
 @import "../../config/mixins.pcss";
 
 html{
-	&:not([m-browser~="mobile"]){
+	& body{
+		&[m-overlay=true]{
+			& .trx-header{
+				&[m-menu-open=true]{
+					& ~ .cbx-overlay{
+						z-index: 0;
+					}
+				}
+			}
+		}
+	}
+	&:not([m-browser~=mobile]){
 		& .trx-header{
 			& nav{
 				& > ul {
@@ -19,13 +30,27 @@ html{
 			}
 		}
 	}
+	&[m-browser~=mobile]{
+		& .trx-header {
+			&[m-menu-open="true"] {
+				& nav {
+					& > .trx-button{
+						display: inline-flex;
+					}
+				}
+			}
+		}
+	}
 }
 
 .trx-header {
+	@mixin position-sticky;
 	@mixin viewport xs, height, 85;
 	@mixin viewport xs, padding-top, 10;
 	@mixin transition height;
 	background-color: var(--black);
+	top: 0;
+	z-index: 1;
 	& .header-logos {
 		@mixin viewport xs, width, 200;
 		@mixin viewport xs, height, 20;
@@ -69,6 +94,9 @@ html{
 	& nav {
 		& > button {
 			display: none;
+			& .cbx-svg-icon{
+				stroke: var(--white);
+			}
 		}
 		& > ul {
 			@mixin viewport xs, height, 35;
@@ -106,6 +134,18 @@ html{
 				}
 			}
 		}
+		& > .trx-button{
+			display: none;
+		}
+	}
+	& > button{
+		@mixin viewport xs, top, 20;
+		@mixin viewport xs, left, 20;
+		display: none;
+		position: absolute;
+		& .cbx-svg-icon{
+			fill: var(--white);
+		}
 	}
 }
 
@@ -116,7 +156,7 @@ html{
 				display: none;
 			}
 		}
-		&[m-menu-fixed="true"] {
+		&[m-menu-fixed=true] {
 			will-change: height;
 			@mixin viewport xs, height, 60;
 			display: flex;
@@ -137,6 +177,7 @@ html{
 					display: flex;
 					flex-shrink: 0;
 					flex-grow: 0;
+					justify-content: center;
 					&:first-child {
 						@mixin viewport xs, flex-basis, 40;
 						color: var(--white);
@@ -150,18 +191,29 @@ html{
 				& > ul {
 					display: none;
 				}
+				& > .trx-button{
+					@mixin viewport xs, width, 180;
+					min-width: auto;
+					display: inline-flex;
+				}
 			}
 		}
-		&[m-menu-open="true"] {
+		&[m-menu-open=true] {
 			position: fixed;
 			height: 100%;
 			width: 100%;
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-top: 0;
+			& .header-logos{
+				display: none;
+			}
 			& nav {
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				height: 100%;
+				text-align: center;
 				& > button{
+					/* display: block; */
 					&:first-child{
 						position: absolute;
 						@mixin viewport xs, top, 20;
@@ -173,18 +225,42 @@ html{
 					}
 				}
 				& > ul {
-					display: block;
+					display: inline-block;
 					height: auto;
 					& > li {
-						@mixin viewport xs, height, 50;					
 						text-align: center;
 						margin: {
 							right: 0;
 							@mixin viewport xs, bottom, 40;
 						}
-						& .cbx-link {
-							@mixin viewport xs, padding-top, 15;
+						& .cbx-link{
+							@mixin viewport xs, height, 50;
+							display: flex;
+							align-items: center;
+							justify-content: center;
 						}
+					/* 	& .cbx-link {
+							@mixin viewport xs, padding-top, 15;
+						} */
+					}
+				}
+			}
+			& > button{
+				display: block;
+			}
+		}
+		&[m-menu-open=true]{
+			&[m-menu-fixed=true]{
+				& nav {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: column;
+					align-items: center;
+					& > ul{
+						display: inline-block;
+					}
+					& > button{
+						display: none;
 					}
 				}
 			}

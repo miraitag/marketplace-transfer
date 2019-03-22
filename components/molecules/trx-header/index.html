@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/transfer/assets/css/trx-header-footer-transfer.min.css">
 </head>
 <body>
-    <header class="trx-header" m-menu-fixed="false" m-menu-open="false">
+    <header id="trx-header-main" class="trx-header" m-menu-fixed="false" m-menu-open="false">
         <a href="/" class="header-logos">
             <figure class="cbx-img">
                 <svg viewBox="0 0 415 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -38,9 +38,13 @@
             </figure>
         </a>
         <nav>
-            <button type="button">
-                HAM
-            </button>
+			<button type="button">
+				<svg class="cbx-svg-icon" m-size="40" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g stroke-linecap="square">
+						<path d="M1,12 L23,12 L1,12 Z M1,5 L23,5 L1,5 Z M1,19 L23,19 L1,19 Z"></path>
+					</g>
+				</svg>
+			</button>
             <ul>
                 <li>
                     <a class="cbx-link" href="" m-active="true">Conócenos</a>
@@ -52,7 +56,7 @@
                     <a class="cbx-link" href="" m-active="false">Ayuda</a>
                 </li>
             </ul>
-            <button class="cbx-button">Descarga la app</button>
+            <button class="cbx-button trx-button">Descarga la app</button>
         </nav>
     </header>
     <script src="/assets/js/bootstrap-bundle-min.js"></script>

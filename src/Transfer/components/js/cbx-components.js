@@ -804,7 +804,7 @@ var
 	modal = $('[m-modal="cbx-modal"]'),
 	submenu = $('.cbx-submenu[m-open]');
 
-if( $('#main-header').length && !$('#main-header .header-content').length){
+if( $('#trx-header-main').length && !$('#trx-header-main > nav').length){
 	if( MutationObserver){
 		var config = { attributes: true, childList: true, subtree: true };
 		var callback = function(mutationsList, observer) {
@@ -816,16 +816,16 @@ if( $('#main-header').length && !$('#main-header .header-content').length){
 			}
 		};
 		var observer = new MutationObserver(callback);
-		observer.observe(document.querySelector('#main-header'), config)
+		observer.observe(document.querySelector('#trx-header-main'), config)
 	}else{
 		var waitHeaderLoad = setInterval(function(){
-			if( $('#main-header > section').length){
+			if( $('#trx-header-main > section').length){
 				$('[m-exit]').exitModal();
 				clearInterval(waitHeaderLoad);
 			}
 		});
 	}
-}else if( $('#main-header').length && $('#main-header .header-content').length ){
+}else if( $('#trx-header-main').length && $('#trx-header-main > nav').length ){
 	$('[m-exit]').exitModal();
 }
 
@@ -893,3 +893,6 @@ $( document ).ready( function(){
 		}
 	});
 });
+
+
+export {cbxOverlay}

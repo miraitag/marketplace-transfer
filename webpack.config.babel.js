@@ -81,7 +81,7 @@ export default (env, args) => {
         plugins: [
             new MiniCssExtractPlugin({
                 filename: '../css/[name].min.css',
-                chunkFilename: "[id].css"
+                chunkFilename: '[id].css'
 			}),
 			new MinifyPlugin()
         ]

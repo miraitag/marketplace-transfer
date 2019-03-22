@@ -5,14 +5,46 @@
 	overflow: hidden;
 	& .hero-labels{
 		& .content-hero{
-			@mixin viewport xs, top, 40;
-			transform: none;
+			& .cbx-apps{
+				& .cbx-img{
+					background-color: transparent;
+				}
+			}
 		}
 	}
 }
 
 @media (--max-mobile){
 	.trx-hero{
-		
+		& .hero-labels{
+			& .content-hero{
+				@mixin viewport xs, top, 40;
+				transform: none;
+			}
+		}
+	}
+}
+
+@media (--portrait){
+	.trx-hero{
+		height: 300px;
+	}
+}
+
+@media (--small-desktop){
+	.trx-hero{
+		@mixin viewport lg, height, 400;
+	}
+}
+
+@media (--large-desktop){
+	.trx-hero{
+		@mixin viewport xl, height, 400;
+	}
+}
+
+@media (--full){
+	.trx-hero{
+		@mixin viewport xxl, height, 400;
 	}
 }

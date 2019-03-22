@@ -68,113 +68,113 @@
 @define-mixin box-shadow $media, $name, $citi-blue: 0, 45, 114, $black: 0, 0, 0 {
 	/* BOX SHADOW MOBILE */
 	@if $name == "big-out" and $media == "xs" {
-		box-shadow: 0 calc(12 * 100 / 320)vw calc(36 * 100 / 320)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(12 * 100 / 320)vw calc(36 * 100 / 320)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "large-out" and $media == "xs" {
-		box-shadow: 0 calc(9 * 100 / 320)vw calc(24 * 100 / 320)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(9 * 100 / 320)vw calc(24 * 100 / 320)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "medium-out" and $media == "xs" {
-		box-shadow: 0 calc(6 * 100 / 320)vw calc(16 * 100 / 320)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(6 * 100 / 320)vw calc(16 * 100 / 320)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "small-out" and $media == "xs" {
-		box-shadow: 0 calc(3 * 100 / 320)vw calc(8 * 100 / 320)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(3 * 100 / 320)vw calc(8 * 100 / 320)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "big-inset" and $media == "xs" {
-		box-shadow: inset calc(8 * 100 / 320)vw calc(-8 * 100 / 320)vw calc(16 * 100 / 320)vw rgba($black, 0.2);
+		box-shadow: inset calc(8 * 100 / 320)vw calc(-8 * 100 / 320)vw calc(16 * 100 / 320)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "med-inset" and $media == "xs" {
-		box-shadow: inset calc(4 * 100 / 320)vw calc(-4 * 100 / 320)vw calc(8 * 100 / 320)vw rgba($black, 0.2);
+		box-shadow: inset calc(4 * 100 / 320)vw calc(-4 * 100 / 320)vw calc(8 * 100 / 320)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "small-inset" and $media == "xs" {
-		box-shadow: inset calc(2 * 100 / 320)vw calc(-2 * 100 / 320)vw calc(4 * 100 / 320)vw rgba($black, 0.2);
+		box-shadow: inset calc(2 * 100 / 320)vw calc(-2 * 100 / 320)vw calc(4 * 100 / 320)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "big-out-reverse" and $media == "xs" {
-		box-shadow: 0 calc(-8 * 100 / 320)vw calc(16 * 100 / 320)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-8 * 100 / 320)vw calc(16 * 100 / 320)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "med-out-reverse" and $media == "xs" {
-		box-shadow: 0 calc(-4 * 100 / 320)vw calc(8 * 100 / 320)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-4 * 100 / 320)vw calc(8 * 100 / 320)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "small-out-reverse" and $media == "xs" {
-		box-shadow: 0 calc(-2 * 100 / 320)vw calc(4 * 100 / 320)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-2 * 100 / 320)vw calc(4 * 100 / 320)vw rgba(0, 0, 0, 0.2);
 	}
 	/* BOX SHADOW PORTRAIT */
 	@if $name == "big-out" and $media == "sm" {
-		box-shadow: 0 12px 36px rgba($citi-blue, 0.15);
+		box-shadow: 0 12px 36px rgba(0, 45, 114, 0.15);
 	} @else if $name == "large-out" and $media == "sm" {
-		box-shadow: 0 9px 24px rgba($citi-blue, 0.15);
+		box-shadow: 0 9px 24px rgba(0, 45, 114, 0.15);
 	} @else if $name == "medium-out" and $media == "sm" {
-		box-shadow: 0 6px 16px rgba($citi-blue, 0.15);
+		box-shadow: 0 6px 16px rgba(0, 45, 114, 0.15);
 	} @else if $name == "small-out" and $media == "sm" {
-		box-shadow: 0 3px 8px rgba($citi-blue, 0.15);
+		box-shadow: 0 3px 8px rgba(0, 45, 114, 0.15);
 	} @else if $name == "big-inset" and $media == "sm" {
-		box-shadow: inset 8px -8px 16px rgba($black, 0.2);
+		box-shadow: inset 8px -8px 16px rgba(0, 0, 0, 0.2);
 	} @else if $name == "med-inset" and $media == "sm" {
-		box-shadow: inset 4px -4px 8px rgba($black, 0.2);
+		box-shadow: inset 4px -4px 8px rgba(0, 0, 0, 0.2);
 	} @else if $name == "small-inset" and $media == "sm" {
-		box-shadow: inset 2px -2px 4px rgba($black, 0.2);
+		box-shadow: inset 2px -2px 4px rgba(0, 0, 0, 0.2);
 	} @else if $name == "big-out-reverse" and $media == "sm" {
-		box-shadow: 0 -8px 16px rgba($black, 0.2);
+		box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2);
 	} @else if $name == "med-out-reverse" and $media == "sm" {
-		box-shadow: 0 -4px 8px rgba($black, 0.2);
+		box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 	} @else if $name == "small-out-reverse" and $media == "sm" {
-		box-shadow: 0 -2px 4px rgba($black, 0.2);
+		box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
 	}
 	/* BOX SHADOW SMALL-DESKTOP */
 	@if $name == "big-out" and $media == "lg" {
-		box-shadow: 0 calc(12 * 100 / 1024)vw calc(36 * 100 / 1024)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(12 * 100 / 1024)vw calc(36 * 100 / 1024)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "large-out" and $media == "lg" {
-		box-shadow: 0 calc(9 * 100 / 1024)vw calc(24 * 100 / 1024)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(9 * 100 / 1024)vw calc(24 * 100 / 1024)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "medium-out" and $media == "lg" {
-		box-shadow: 0 calc(6 * 100 / 1024)vw calc(16 * 100 / 1024)vw rgba($citi-blue, 0.2);
+		box-shadow: 0 calc(6 * 100 / 1024)vw calc(16 * 100 / 1024)vw rgba(0, 45, 114, 0.2);
 	} @else if $name == "small-out" and $media == "lg" {
-		box-shadow: 0 calc(3 * 100 / 1024)vw calc(8 * 100 / 1024)vw rgba($citi-blue, 0.2);
+		box-shadow: 0 calc(3 * 100 / 1024)vw calc(8 * 100 / 1024)vw rgba(0, 45, 114, 0.2);
 	} @else if $name == "big-inset" and $media == "lg" {
-		box-shadow: inset calc(8 * 100 / 1024)vw calc(-8 * 100 / 1024)vw calc(16 * 100 / 1024)vw rgba($black, 0.2);
+		box-shadow: inset calc(8 * 100 / 1024)vw calc(-8 * 100 / 1024)vw calc(16 * 100 / 1024)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "med-inset" and $media == "lg" {
-		box-shadow: inset calc(4 * 100 / 1024)vw calc(-4 * 100 / 1024)vw calc(8 * 100 / 1024)vw rgba($black, 0.2);
+		box-shadow: inset calc(4 * 100 / 1024)vw calc(-4 * 100 / 1024)vw calc(8 * 100 / 1024)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "small-inset" and $media == "lg" {
-		box-shadow: inset calc(2 * 100 / 1024)vw calc(-2 * 100 / 1024)vw calc(4 * 100 / 1024)vw rgba($black, 0.2);
+		box-shadow: inset calc(2 * 100 / 1024)vw calc(-2 * 100 / 1024)vw calc(4 * 100 / 1024)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "big-out-reverse" and $media == "lg" {
-		box-shadow: 0 calc(-8 * 100 / 1024)vw calc(16 * 100 / 1024)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-8 * 100 / 1024)vw calc(16 * 100 / 1024)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "med-out-reverse" and $media == "lg" {
-		box-shadow: 0 calc(-4 * 100 / 1024)vw calc(8 * 100 / 1024)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-4 * 100 / 1024)vw calc(8 * 100 / 1024)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "small-out-reverse" and $media == "lg" {
-		box-shadow: 0 calc(-2 * 100 / 1024)vw calc(4 * 100 / 1024)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-2 * 100 / 1024)vw calc(4 * 100 / 1024)vw rgba(0, 0, 0, 0.2);
 	}
 	/* BOX SHADOW LARGE-DESKTOP */
 	@if $name == "big-out" and $media == "xl" {
-		box-shadow: 0 calc(12 * 100 / 1280)vw calc(36 * 100 / 1280)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(12 * 100 / 1280)vw calc(36 * 100 / 1280)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "large-out" and $media == "xl" {
-		box-shadow: 0 calc(9 * 100 / 1280)vw calc(24 * 100 / 1280)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(9 * 100 / 1280)vw calc(24 * 100 / 1280)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "medium-out" and $media == "xl" {
-		box-shadow: 0 calc(6 * 100 / 1280)vw calc(16 * 100 / 1280)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(6 * 100 / 1280)vw calc(16 * 100 / 1280)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "small-out" and $media == "xl" {
-		box-shadow: 0 calc(3 * 100 / 1280)vw calc(8 * 100 / 1280)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(3 * 100 / 1280)vw calc(8 * 100 / 1280)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "big-inset" and $media == "xl" {
-		box-shadow: inset calc(8 * 100 / 1280)vw calc(-8 * 100 / 1280)vw calc(16 * 100 / 1280)vw rgba($black, 0.2);
+		box-shadow: inset calc(8 * 100 / 1280)vw calc(-8 * 100 / 1280)vw calc(16 * 100 / 1280)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "med-inset" and $media == "xl" {
-		box-shadow: inset calc(4 * 100 / 1280)vw calc(-4 * 100 / 1280)vw calc(8 * 100 / 1280)vw rgba($black, 0.2);
+		box-shadow: inset calc(4 * 100 / 1280)vw calc(-4 * 100 / 1280)vw calc(8 * 100 / 1280)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "small-inset" and $media == "xl" {
-		box-shadow: inset calc(2 * 100 / 1280)vw calc(-2 * 100 / 1280)vw calc(4 * 100 / 1280)vw rgba($black, 0.2);
+		box-shadow: inset calc(2 * 100 / 1280)vw calc(-2 * 100 / 1280)vw calc(4 * 100 / 1280)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "big-out-reverse" and $media == "xl" {
-		box-shadow: 0 calc(-8 * 100 / 1280)vw calc(16 * 100 / 1280)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-8 * 100 / 1280)vw calc(16 * 100 / 1280)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "med-out-reverse" and $media == "xl" {
-		box-shadow: 0 calc(-4 * 100 / 1280)vw calc(8 * 100 / 1280)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-4 * 100 / 1280)vw calc(8 * 100 / 1280)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "small-out-reverse" and $media == "xl" {
-		box-shadow: 0 calc(-2 * 100 / 1280)vw calc(4 * 100 / 1280)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-2 * 100 / 1280)vw calc(4 * 100 / 1280)vw rgba(0, 0, 0, 0.2);
 	}
 	/* BOX SHADOW FULL */
 	@if $name == "big-out" and $media == "xxl" {
-		box-shadow: 0 calc(12 * 100 / 1440)vw calc(36 * 100 / 1440)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(12 * 100 / 1440)vw calc(36 * 100 / 1440)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "large-out" and $media == "xxl" {
-		box-shadow: 0 calc(9 * 100 / 1440)vw calc(24 * 100 / 1440)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(9 * 100 / 1440)vw calc(24 * 100 / 1440)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "medium-out" and $media == "xxl" {
-		box-shadow: 0 calc(6 * 100 / 1440)vw calc(16 * 100 / 1440)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(6 * 100 / 1440)vw calc(16 * 100 / 1440)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "small-out" and $media == "xxl" {
-		box-shadow: 0 calc(3 * 100 / 1440)vw calc(8 * 100 / 1440)vw rgba($citi-blue, 0.15);
+		box-shadow: 0 calc(3 * 100 / 1440)vw calc(8 * 100 / 1440)vw rgba(0, 45, 114, 0.15);
 	} @else if $name == "big-inset" and $media == "xxl" {
-		box-shadow: inset calc(8 * 100 / 1440)vw calc(-8 * 100 / 1440)vw calc(16 * 100 / 1440)vw rgba($black, 0.2);
+		box-shadow: inset calc(8 * 100 / 1440)vw calc(-8 * 100 / 1440)vw calc(16 * 100 / 1440)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "med-inset" and $media == "xxl" {
-		box-shadow: inset calc(4 * 100 / 1440)vw calc(-4 * 100 / 1440)vw calc(8 * 100 / 1440)vw rgba($black, 0.2);
+		box-shadow: inset calc(4 * 100 / 1440)vw calc(-4 * 100 / 1440)vw calc(8 * 100 / 1440)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "small-inset" and $media == "xxl" {
-		box-shadow: inset calc(2 * 100 / 1440)vw calc(-2 * 100 / 1440)vw calc(4 * 100 / 1440)vw rgba($black, 0.2);
+		box-shadow: inset calc(2 * 100 / 1440)vw calc(-2 * 100 / 1440)vw calc(4 * 100 / 1440)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "big-out-reverse" and $media == "xxl" {
-		box-shadow: 0 calc(-8 * 100 / 1440)vw calc(16 * 100 / 1440)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-8 * 100 / 1440)vw calc(16 * 100 / 1440)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "med-out-reverse" and $media == "xxl" {
-		box-shadow: 0 calc(-4 * 100 / 1440)vw calc(8 * 100 / 1440)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-4 * 100 / 1440)vw calc(8 * 100 / 1440)vw rgba(0, 0, 0, 0.2);
 	} @else if $name == "small-out-reverse" and $media == "xxl" {
-		box-shadow: 0 calc(-2 * 100 / 1440)vw calc(4 * 100 / 1440)vw rgba($black, 0.2);
+		box-shadow: 0 calc(-2 * 100 / 1440)vw calc(4 * 100 / 1440)vw rgba(0, 0, 0, 0.2);
 	}
 }
 
