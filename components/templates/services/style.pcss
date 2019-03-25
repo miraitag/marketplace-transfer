@@ -1,0 +1,163 @@
+@import "../../config/mixins.pcss";
+
+[m-desk=servicios]{
+	display: flex;
+	flex-direction: column;
+	& .servicios-cards{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		& .cbx-img{
+			@mixin viewport xs, height, 87;
+			@mixin viewport xs, flex-basis, 130;
+			margin: {
+				@mixin viewport xs, right, 20;
+				@mixin viewport xs, bottom, 20;
+			}
+			flex-grow: 0;
+			flex-shrink: 1;
+			&:nth-child(even){
+				margin-right: 0;
+			}
+		}
+	}
+	& > .cbx-link{
+		align-self: center;
+	}
+}
+
+[m-desk=digitals]{
+		& .digitals-cards{
+			& .cbx-card{
+				@mixin viewport xs, width, 240;
+				width: 225px;
+			}
+		}
+	}
+
+@media (--max-mobile){
+	[m-desk=digitals]{
+		& .cbx-wrapper{
+			padding: {
+				right: 0;
+				left: 0;
+			}
+		}
+	}
+}
+
+@media (--portrait){
+	[m-desk=servicios]{
+		& .servicios-cards{
+			& .cbx-img{
+				height: 96px;
+				flex-basis: 96px;
+				margin: {
+					right: 20px;
+					bottom: 20px;
+				}
+				&:nth-child(even){
+					margin-right: 20px;
+				}
+				&:nth-child(6n){
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	[m-desk=digitals]{
+		& .digitals-cards{
+			& .cbx-card{
+				width: 225px;
+			}
+		}
+	}
+}
+
+@media (--small-desktop){
+	[m-desk=servicios]{
+		& .servicios-cards{
+			& .cbx-img{
+				@mixin viewport lg, height, 100;
+				@mixin viewport lg, flex-basis, 166;
+				margin: {
+					@mixin viewport lg, right, 20;
+					@mixin viewport lg, bottom, 20;
+				}
+				&:nth-child(even){
+					@mixin viewport lg, margin-right, 20;
+				}
+			}
+		}
+	}
+	[m-desk=digitals]{
+		& .digitals-cards{
+			display: flex;
+			& .cbx-card{
+				@mixin viewport lg, margin-right, 20;
+				@mixin viewport lg, flex-basis, 225;
+				flex-grow: 0;
+				flex-shrink: 1;
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (--large-desktop){
+	[m-desk=servicios]{
+		& .servicios-cards{
+			& .cbx-img{
+				@mixin viewport xl, height, 100;
+				@mixin viewport xl, flex-basis, 166;
+				margin: {
+					@mixin viewport xl, right, 20;
+					@mixin viewport xl, bottom, 20;
+				}
+				&:nth-child(even){
+					@mixin viewport xl, margin-right, 20;
+				}
+			}
+		}
+	}
+
+	[m-desk=digitals]{
+		& .digitals-cards{
+			display: flex;
+			& .cbx-card{
+				@mixin viewport xl, margin-right, 20;
+				@mixin viewport xl, flex-basis, 255;
+			}
+		}
+	}
+}
+
+@media (--full){
+	[m-desk=servicios]{
+		& .servicios-cards{
+			& .cbx-img{
+				@mixin viewport xxl, height, 100;
+				@mixin viewport xxl, flex-basis, 166;
+				margin: {
+					@mixin viewport xxl, right, 20;
+					@mixin viewport xxl, bottom, 20;
+				}
+				&:nth-child(even){
+					@mixin viewport xxl, margin-right, 20;
+				}
+			}
+		}
+	}
+
+	[m-desk=digitals]{
+		& .digitals-cards{
+			display: flex;
+			& .cbx-card{
+				@mixin viewport xxl, margin-right, 20;
+				@mixin viewport xxl, flex-basis, 255;
+			}
+		}
+	}
+}

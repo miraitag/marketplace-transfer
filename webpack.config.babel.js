@@ -13,7 +13,7 @@ export default (env, args) => {
             'trx-components-transfer' : ['./src/Transfer/components/index','./src/Transfer/components/js/cbx-components'],
             'trx-header-footer-transfer' : './src/Transfer/header-footer/index',
             'trx-templates-home' : './src/Transfer/templates/home',
-            'trx-templates-services' : './src/Transfer/templates/home'
+            'trx-templates-services' : './src/Transfer/templates/services'
         },
         output: {
             filename: '[name].bundle.js',
@@ -47,7 +47,7 @@ export default (env, args) => {
                                     require('postcss-mixins')(),
                                     require('postcss-conditionals')(),
                                     require('postcss-calc')({
-                                        precision: 2
+                                        precision: 1
                                     }),
                                     require('postcss-nested-props')(),
                                     postcssPresetEnv({
