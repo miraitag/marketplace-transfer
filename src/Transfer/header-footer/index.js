@@ -2,9 +2,18 @@ import '../../../components/molecules/trx-header/style.pcss'
 import '../../../components/molecules/trx-footer/style.pcss'
 
 import Header from '../components/js/Header'
-import AsyncHeader from '../components/js/AsyncHeader'
+import { responseHeader } from './asyncHeader';
 
-const headers = new Headers();
+
+responseHeader.then(()=>{
+	console.log('Cargo el Header-Footer correctamente');
+	new Header().init();
+})
+
+
+//import AsyncHeader from '../components/js/AsyncHeader'
+
+/* const headers = new Headers();
 headers.append('Content-Type', 'text/html');
 
 const async = new AsyncHeader('/transfer/assets/piezas/trx-headerfooter.htm', {
@@ -20,4 +29,4 @@ const hf = async.asyncLoadFile();
 hf.then(()=>{
 	console.log('Cargo el Header-Footer correctamente');
 	new Header().init();
-});
+}); */
