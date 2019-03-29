@@ -12,13 +12,13 @@ export default (env, args) => {
         entry: {
             'trx-components-transfer' : ['./src/Transfer/components/index','./src/Transfer/components/js/cbx-components'],
             'trx-header-footer-transfer' : './src/Transfer/header-footer/index',
-            'trx-templates-home' : './src/Transfer/templates/home',
-            'trx-templates-services' : './src/Transfer/templates/services'
+            'trx-template-home' : './src/Transfer/templates/home',
+            'trx-template-services' : './src/Transfer/templates/services'
         },
         output: {
             filename: '[name].bundle.js',
 			path: `${__dirname}/assets/js`
-        },
+		},
         module: {
             rules: [
                 {
@@ -47,7 +47,7 @@ export default (env, args) => {
                                     require('postcss-mixins')(),
                                     require('postcss-conditionals')(),
                                     require('postcss-calc')({
-                                        precision: 1
+                                        precision: 3
                                     }),
                                     require('postcss-nested-props')(),
                                     postcssPresetEnv({
@@ -72,7 +72,16 @@ export default (env, args) => {
                     ]
                 }
             ]
-        },
+		},
+		devServer: {
+			hot: true, 
+			/*contentBase: '/',
+			watchContentBase: true,*/
+			compress: true,
+			port: 9000,
+			open: true,
+			publicPath: '/assets/'
+		},
         optimization: {
             minimizer: [
                 new OptimizeCSSAssetsPlugin()

@@ -15,6 +15,7 @@ svg{
 	width: 100%;
 }
 
+
 [m-back="background-gray"] {
 	background-color: var(--background-gray);
 }
@@ -258,12 +259,16 @@ a {
 [m-font~="inherit-color"] {
 	color: inherit !important;
 }
-[m-font="inherit"] {
+[m-font~="inherit"] {
 	font: {
 		size: inherit !important;
 		family: inherit !important;
 	}
 	color: inherit !important;
+}
+
+[m-font~=pre-line]{
+	white-space: pre-line; 
 }
 
 @media (max-width: 1024px) and (min-aspect-ratio: 13/9) {

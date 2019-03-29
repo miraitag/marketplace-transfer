@@ -10,7 +10,9 @@
     "webpack": "^4.29.6"
   },
   "scripts": {
-    "prod": "webpack --mode production"
+    "prod": "webpack --mode production",
+	"develop": "webpack --mode development",
+	"server": "webpack-dev-server --color"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -32,6 +34,7 @@
     "postcss-mixins": "^6.2.1",
     "postcss-nested-props": "^2.0.0",
     "postcss-preset-env": "^6.6.0",
+    "style-loader": "^0.23.1",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"
   }
