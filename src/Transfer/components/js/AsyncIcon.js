@@ -5,7 +5,9 @@ export default class AsyncIcon extends FetchFile{
         this.loadFile(this.path, this.method).then(response => {
             if(response.ok){
                 return response.text();
-            }
+            }else{
+				console.log(`Error de respuesta: ${response}`)
+			}
         }).then( html => {
             let
                 parser = new DOMParser(),
@@ -28,8 +30,9 @@ export default class AsyncIcon extends FetchFile{
 					size: iconDocument.getAttribute('m-size') ? iconSvgHtml.setAttribute('m-size', iconDocument.getAttribute('m-size')) : false
 				},
 				parentIcon = iconDocument.parentNode;
-				
-			parentIcon.replaceChild(iconSvgHtml,iconDocument);
+
+			iconDocument.insertAdjacentElement('beforebegin', iconSvgHtml);
+			parentIcon.removeChild(iconDocument);
 		}
 	}
 }

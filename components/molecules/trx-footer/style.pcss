@@ -2,7 +2,7 @@
 
 .trx-footer{
 	@mixin viewport xs, height, 100;
-	background-color: var(--black);
+	background-color: var(--black,#000);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -29,7 +29,7 @@
 			}
 		}
 		& > .cbx-text {
-			color: var(--white);
+			color: var(--white,#fff);
 		}
 	}
 	& .footer-socials{
@@ -44,7 +44,7 @@
 				display: flex;
 			}
 			& .cbx-svg-icon{
-				fill: var(--white);
+				fill: var(--white,#fff);
 			}
 		}
 	}

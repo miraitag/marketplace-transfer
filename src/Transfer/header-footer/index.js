@@ -5,13 +5,13 @@ import { responseHeader } from './asyncHeader'
 import '../../../components/molecules/trx-header/style.pcss'
 import '../../../components/molecules/trx-footer/style.pcss'
 
-const headers = new Headers();
-headers.append('Content-Type', 'text/html');
+/* const headers = new Headers();
+headers.append('Content-Type', 'text/html'); */
 
 const asyncIcons = new AsyncIcon('/transfer/assets/piezas/svg.htm', {
 	method: 'GET',
 	mode: 'cors',
-	headers: headers,
+	/* headers: headers, */
 	cache: 'default',
 	credentials: 'same-origin' 
 });

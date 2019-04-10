@@ -48,7 +48,7 @@ html{
 	@mixin viewport xs, height, 85;
 	@mixin viewport xs, padding-top, 10;
 	@mixin transition height;
-	background-color: var(--black);
+	background-color: var(--black, #000);
 	top: 0;
 	z-index: 1;
 	& .header-logos {
@@ -78,12 +78,12 @@ html{
 				width: 1px;
 				height: 60%;
 				right: 0;
-				background-color: var(--white);
+				background-color: var(--white,#fff);
 				
 			}
 			& svg {
 				stroke-width: 4;
-				stroke: var(--white);
+				stroke: var(--white,#fff);
 			}
 		}
 		&:nth-child(2) {
@@ -95,7 +95,7 @@ html{
 		& > button {
 			display: none;
 			& .cbx-svg-icon{
-				stroke: var(--white);
+				stroke: var(--white,#fff);
 			}
 		}
 		& > ul {
@@ -115,14 +115,14 @@ html{
 					height: inherit;
 					position: relative;
 					display: block;
-					color: var(--white);
+					color: var(--white,#fff);
 					&::after {
 						@mixin absolute center-horizontal;
 						@mixin viewport xs, height, 4;
 						@mixin transition width;
 						content: '';
 						bottom: 0;
-						background-color: var(--white);
+						background-color: var(--white,#fff);
 						width: 0;
 					}
 					&[m-active="true"] {
@@ -144,7 +144,7 @@ html{
 		display: none;
 		position: absolute;
 		& .cbx-svg-icon{
-			fill: var(--white);
+			fill: var(--white,#fff);
 		}
 	}
 }
@@ -175,7 +175,7 @@ html{
 					justify-content: center;
 					&:first-child {
 						@mixin viewport xs, flex-basis, 40;
-						color: var(--white);
+						color: var(--white,#fff);
 						position: relative;
 					}
 					&:last-child {

@@ -17,7 +17,7 @@ svg{
 
 
 [m-back="background-gray"] {
-	background-color: var(--background-gray);
+	background-color: var(--background-gray,#f2f4f8);
 }
 
 html {
@@ -54,7 +54,7 @@ body {
 	&[m-overlay="true"] {
 		overflow: hidden;
 		& .cbx-overlay {
-			background-color: var(--black);
+			background-color: var(--black,#000);
 			position: fixed;
 			opacity: 0.7;
 			width: 100%;
@@ -145,7 +145,7 @@ select {
 	border: none;
 	background: transparent;
 	&:disabled {
-		color: var(--middle-gray);
+		color: var(--middle-gray,#ccc);
 	}
 	&::-ms-expand {
 		display: none;
@@ -238,16 +238,16 @@ a {
 
 /* Fonts */
 [m-font="light"] {
-	font-family: var(--font-l)!important;
+	font-family: var(--font-l, IEL, Arial, Helvetica, sans-serif)!important;
 }
 [m-font="regular"] {
-	font-family: var(--font-r)!important;
+	font-family: var(--font-r, IL, Arial, Helvetica, sans-serif)!important;
 }
 [m-font="bold"] {
-	font-family: var(--font-b)!important;
+	font-family: var(--font-b, IR, Arial, Helvetica, sans-serif)!important;
 }
 [m-font="extra-bold"] {
-	font-family: var(--font-xb)!important;
+	font-family: var(--font-xb, IB, Arial, Helvetica, sans-serif)!important;
 }
 
 [m-font~="inherit-size"] {

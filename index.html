@@ -18,8 +18,10 @@
 	<title>Transfer Citibanamex | Citibanamex.com</title>
     <link rel="stylesheet" href="/transfer/assets/css/trx-components-transfer.min.css">
     <link rel="stylesheet" href="/transfer/assets/css/trx-header-footer-transfer.min.css">
-    <link rel="stylesheet" href="/transfer/assets/css/trx-template-home.min.css">
+	<link rel="stylesheet" href="/transfer/assets/css/trx-template-home.min.css">
+	<script src="/recursos/js/axfTag.js"></script>
 </head>
+<style> html[m-browser~="mobile"] [m-desk="hero"] .content-hero > .cbx-link { display: none }</style>
 <body>
 	<header id="trx-header-main"></header>
 	<section m-desk="hero" m-theme="white" class="cbx-hero trx-hero">
@@ -45,12 +47,18 @@
 						</figure>
 					</button>
 				</div>
+				<a class="cbx-link trx-link" href="/transfer/pdf/crear-cuenta.pdf" m-mody="cta" target="_blank">
+					Conoce cómo hacerlo
+					<span class="cbx-icon" m-size="20" m-mody="icon-bold" style="color:#fff;">
+						<i class="icon-arrow-right-o"></i>
+					</span>
+				</a>
 			</div>
 		</div>
 	</section>
 	<section m-desk="benefits" m-back="background-gray">
 		<div class="cbx-wrapper benefits-cuentas">
-			<h2 class="cbx-headline-section">¿Qué puedo hacer con mi Cuenta desde la App Transfer?</h2>
+			<h2 class="cbx-title" m-font="bold">¿Qué puedo hacer con mi Cuenta desde la App Transfer?</h2>
 			<div class="cuenta-cards">
 				<article class="cbx-card trx-card" m-mody="c-img c-img-half">
 					<figure class="cbx-img">
@@ -60,15 +68,9 @@
 						<div class="card-description">
 							<i m-icon="smart-phone"></i>
 							<h3 class="cbx-title">Recibe dinero en tu celular</h3>
-							<p class="cbx-text">Podrán depositarte a tu número de celular desde tiendas OXXO, 7-Eleven, supermercados Soriana, Ley o en Farmacias del Ahorro. También lo podrán hacer utilizando tu número de cuenta CLABE desde cualquier sucursal bancaria.</p>
-							<a class="cbx-link trx-link" href="#" m-mody="cta" target="_blank">
-								Conoce como hacerlo
-								<span class="cbx-icon" m-size="20" m-mody="icon-bold">
-									<i class="icon-arrow-right-o"></i>
-								</span>
-							</a>
-							<a class="cbx-link trx-link" href="/transfer/transfer/assets/pdf/10-recibir-dinero.pdf" m-mody="cta" target="_blank">
-								Descubre nuestra Red Transfer
+							<p class="cbx-text">Podrán depositarte a tu número de celular desde tiendas <span m-font="bold">OXXO<sup>®</sup>, 7-Eleven</span>, supermercados <span m-font="bold">Soriana, Ley</span> o en <span m-font="bold">Farmacias del Ahorro.</span> También lo podrás hacer utilizando tu número de cuenta CLABE desde cualquier sucursal bancaria.</p>
+							<a class="cbx-link trx-link" href="/transfer/pdf/recibir-dinero.pdf" m-mody="cta" target="_blank">
+								Conoce cómo hacerlo
 								<span class="cbx-icon" m-size="20" m-mody="icon-bold">
 									<i class="icon-arrow-right-o"></i>
 								</span>
@@ -85,7 +87,7 @@
 							<i m-icon="remove-cash"></i>
 							<h3 class="cbx-title">Retira dinero en cajeros con tu App</h3>
 							<p class="cbx-text">Hazlo sin tarjeta y sin costo desde cualquier Cajero Citibanamex, utilizando tu App Transfer.</p>
-							<a class="cbx-link trx-link" href="/transfer/transfer/assets/pdf/2-retirar-dinero.pdf" m-mody="cta" target="_blank">
+							<a class="cbx-link trx-link" href="/transfer/pdf/retirar-dinero.pdf" m-mody="cta" target="_blank">
 								Descubre cómo
 								<span class="cbx-icon" m-size="20" m-mody="icon-bold">
 									<i class="icon-arrow-right-o"></i>
@@ -102,8 +104,8 @@
 						<div class="card-description">
 							<i m-icon="cash"></i>
 							<h3 class="cbx-title">Envía dinero a tus contactos</h3>
-							<p class="cbx-text">Envía dinero a otros números celulares, Cuentas CLABE y tarjetas de otros bancos nacionales</p>
-							<a class="cbx-link trx-link" href="/transfer/transfer/assets/pdf/3-enviar-dinero.pdf" m-mody="cta" target="_blank">
+							<p class="cbx-text">Envía dinero a otros números celulares, Cuentas CLABE y tarjetas de otros bancos nacionales.</p>
+							<a class="cbx-link trx-link" href="/transfer/pdf/enviar-dinero.pdf" m-mody="cta" target="_blank">
 								Te decimos cómo
 								<span class="cbx-icon" m-size="20" m-mody="icon-bold">
 									<i class="icon-arrow-right-o"></i>
@@ -115,8 +117,7 @@
 			</div>
 		</div>
 		<div class="cbx-wrapper benefits-money">
-			<h2 class="cbx-headline-section">El dinero de tu Cuenta,</h2>
-			<h2 class="cbx-headline-section">seguro y disponible en todo momento con la App Transfer</h2>
+			<h2 class="cbx-title" m-font="bold">El dinero de tu cuenta, seguro y disponible en todo momento con la App Transfer</h2>
 			<div class="money-cards">
 				<article class="cbx-card trx-card">
 					<div class="card-content">
@@ -140,7 +141,8 @@
 							<ul class="cbx-list cbx-text">
 								<li class="list-item">- Depósito a tu cuenta</li>
 								<li class="list-item">- Retiro de tu cuenta</li>
-								<li class="list-item">- Envío de dinero a otra cuenta - Compra/monto realizado</li>
+								<li class="list-item">- Envío de dinero a otra cuenta </li>
+								<li class="list-item">- Compra/monto realizado</li>
 							</ul>
 						</div>
 					</div>
@@ -149,7 +151,7 @@
 					<div class="card-content">
 						<div class="card-description">
 							<h3 class="cbx-category">ACCESIBILIDAD</h3>
-							<h4 class="cbx-title">Consulta tu cuenta en tiempo real las 24 horas del día, los 7 días de la semana.</h4>
+							<h4 class="cbx-title">Consulta tu cuenta en tiempo real las 24 horas del día, los 7 días de la semana</h4>
 							<ul class="cbx-list cbx-text">
 								<li class="list-item">- Consulta de saldo y movimientos</li>
 								<li class="list-item">- Datos de la cuenta</li>
@@ -161,18 +163,18 @@
 		</div>
 	</section>
 	<section m-desk="saldazo" class="cbx-wrapper">
-		<h3 class="cbx-headline-section">Tu Cuenta Transfer | Citibanamex te otorga una Tarjeta Saldazo</h3>
+		<h3 class="cbx-title" m-font="bold">Tu Cuenta Transfer | Citibanamex te otorga una Tarjeta Saldazo</h3>
 		<figure class="cbx-img">
 			<img src="/transfer/assets/img/index/tarjeta-de-debito-saldazo-citibanamex.png" alt="Tarjeta de Débito Saldazo Citibanamex">
 		</figure>
 		<div class="saldazo-description">
-			<p class="cbx-title">Utilizala para:</p>
+			<p class="cbx-title">Utilízala para:</p>
 			<ul class="cbx-list cbx-text">
-				<li class="list-item">- Compras en Amazon, Linio y tiendas en línea.</li>
-				<li class="list-item">- Viajes con descuentos en Uber, Uber Lite.</li>
-				<li class="list-item">- Preventas Citibanamex en Ticketmaster.</li>
-				<li class="list-item">- Promociones exclusivas en OXXO y retiros con costo preferencial.</li>
-				<li class="list-item">- Pagos en comercios que aceptan Visa.</li>
+				<li>- Compras en <span m-font="bold">Amazon, Linio </span> y tiendas en línea.</li>
+				<li>- Viajes con descuentos en <span m-font="bold"> Uber y Uber Lite.</span></li>
+				<li>- <span m-font="bold">Preventas Citibanamex </span> en <span m-font="bold">Ticketmaster.</span></li>
+				<li>- <span m-font="bold">Promociones exclusivas</span> en tiendas <span m-font="bold"> OXXO<sup>® </sup></span> y retiros con costo preferencial.</li>
+				<li>- Pagos en comercios que aceptan <span m-font="bold">Visa.</span></li>
 			</ul>
 			<p class="cbx-title">¿Cómo la obtengo?</p>
 			<div class="cbx-steps">
@@ -184,7 +186,7 @@
 									<p class="cbx-hightlight">1</p>
 								</div>
 								<div class="text-content">
-									<p class="cbx-text">Solicita tu tarjeta en la App Transfer</p>
+									<p class="cbx-text">Solicita tu tarjeta en la App Transfer.</p>
 								</div>
 							</li>
 							<li class="list-item">
@@ -192,7 +194,7 @@
 									<p class="cbx-hightlight">2</p>
 								</div>
 								<div class="text-content">
-									<p class="cbx-text">Recógela* en Oxxo o Citibanamex con tu credencial INE y $50** pesos.</p>
+									<p class="cbx-text">Acércate a un Oxxo<sup>®</sup> con tu folio, INE y $50* para recoger** tu Tarjeta Saldazo.</p>
 								</div>
 							</li>
 						</ul>
@@ -200,14 +202,14 @@
 				</article>
 			</div>
 			<div class="saldazo-legal">
-				<p class="cbx-legal">*De no recogerla dentro de los siguientes 10 días deberás solicitar un nuevo folio desde la App Transfer.</p>
-				<p class="cbx-legal">**Costo por afiliación al Programa de Lealtad de OXXO.</p>
+				<p class="cbx-legal">*OXXO<sup>®</sup>  podrá cobrar $50 por afiliación a su "Programa de Lealtad de OXXO<sup>®</sup>" en caso de solicitar y/o recoger la Tarjeta Saldazo en sus tiendas.</p>
+				<p class="cbx-legal">**De no recogerla dentro de los siguientes 10 días deberás solicitar un nuevo folio desde la App Transfer.</p>
 			</div>
 		</div>
 	</section>
 	<section m-desk="help" m-back="background-gray">
 		<div class="cbx-wrapper">
-			<h2 class="cbx-headline-section">Paga tus servicios básicos, digitales y en tiendas físicas con la App Transfer</h2>
+			<h2 class="cbx-title" m-font="bold">Paga tus servicios básicos, digitales y en tiendas físicas con la App Transfer</h2>
 			<a class="cbx-link trx-link" href="/transfer/servicios.html" m-mody="cta">
 				Ver servicios
 				<span class="cbx-icon" m-size="20" m-mody="icon-bold">
@@ -218,7 +220,7 @@
 	</section>
 	<section m-desk="faqs" data-section="PreguntasFrecuentes">
 		<div class="cbx-wrapper">
-			<h2 class="cbx-headline-section" m-font="bold">Preguntas Frecuentes</h2>
+			<h2 class="cbx-title" m-font="bold" m-font="bold">Preguntas Frecuentes</h2>
 			<div class="cbx-faqs trx-faqs">
 				<article m-drop-down="m-drop-down" m-open="true">
 					<div class="content-items">
@@ -230,7 +232,7 @@
 						</button>
 						<div class="answer-faqs">
 							<p class="cbx-text">
-								Es una cuenta de débito con el respaldo de Citibanamex para recibir, enviar, pagar y retirar dinero. La cuenta se puede abrir en forma Digital desde la App Transfer o en forma de Tarjeta Saldazo desde tiendas Oxxo. Conoce más información aquí
+								Es una cuenta de débito con el respaldo de Citibanamex para recibir, enviar, pagar y retirar dinero. La cuenta se puede abrir en forma Digital desde la App Transfer o en forma de Tarjeta Saldazo desde tiendas Oxxo<sup>®</sup>. Conoce más información <a href="/es/ley_transparencia/folletos_informativos/folleto-informativo-cuenta-transfer-banamex.pdf" class="cbx-link trx-link" target="_blank">aquí</a>.
 							</p>
 						</div>
 					</div>
@@ -243,19 +245,19 @@
 						</button>
 						<div class="answer-faqs">
 							<p class="cbx-text">
-								La cantidad máxima mensual que podrás depositar o recibir en tu Cuenta Transfer I Citibanamex es $18,000.00 aproximadamente o el equivalente a 3,000 UDIS (Unidades de Inversión). El valor de la UDI varía, por lo que los montos máximos de depósito y transacción por día también pueden variar. Consulta el valor de la UDI en <a href="http://www.banxico.org.mx/" class="cbx-link trx-link" target="_blank">www.banxico.org.mx</a>
+								La cantidad máxima mensual que podrás depositar o recibir en tu Cuenta Transfer I Citibanamex es $18,000.00 aproximadamente o el equivalente a 3,000 UDIS (Unidades de Inversión). El valor de la UDI varía, por lo que los montos máximos de depósito y transacción por día también pueden variar. Consulta el valor de la UDI en <a href="http://www.banxico.org.mx/" class="cbx-link trx-link" target="_blank" m-exit='{"metrics":"TextoBottom-04042019-Information-irBanxico","sponsor":"Banxico", "path": "http://www.banxico.org.mx/", "extra":""}'>www.banxico.org.mx</a>
 							</p>
 						</div>
 					</div>
 					<div class="content-items">
 						<button class="cbx-text head-faqs" type="button" m-open="false" aria-controls="">
-							¿Cuál es el costo de comisión mensual de la Cuenta Transfer I Citibanamex?
+							¿Cuál es el costo de comisión mensual de la Cuenta Transfer | Citibanamex?
 							<span class="cbx-icon" m-size="15" m-mody="flat">
 								<i class="icon-angle-down-s"></i>
 							</span>
 						</button>
 						<div class="answer-faqs">
-							<p class="cbx-text">El costo de comisión mensual por el manejo de tu cuenta es de 0$, siempre que realices alguna operación, al menos una vez cada tres meses con la App Transfer o con la Tarjeta Saldazo. Consulta qué operaciones son válidas aquí</p>
+							<p class="cbx-text">El costo de comisión mensual por el manejo de tu cuenta es de $0, siempre que realices alguna operación, al menos una vez cada tres meses con la App Transfer o con la Tarjeta Saldazo. Consulta qué operaciones son válidas <a href="/resources/pdf/es/ley_transparencia/comisiones/comisiones-cuenta-transfer-banamex.pdf" class="cbx-link trx-link" target="_blank">aquí</a>. </p>
 						</div>
 					</div>
 					<div class="content-items">
@@ -266,7 +268,7 @@
 							</span>
 						</button>
 						<div class="answer-faqs">
-							<p class="cbx-text">Una vez que descargues la App Transfer en Google Play o Apple Store, deberás validar tu número de celular. Luego capturar tus datos personales escaneando tu INE vigente y por último generar tu NIP de seguridad (contraseña a 6 números) y ¡Estarás listo para comenzar a usarla! Descubre más información aquí</p>
+							<p class="cbx-text">Una vez que descargues la App Transfer en Google Play o Apple Store, deberás validar tu número de celular. Luego capturar tus datos personales escaneando tu INE vigente y por último generar tu NIP de seguridad (contraseña a 6 números) y ¡Estarás listo para comenzar a usarla! Descubre más información <a href="/transfer/pdf/crear-cuenta.pdf" class="cbx-link trx-link" target="_blank">aquí</a>.</p>
 						</div>
 					</div>
 					<div class="content-items">
@@ -279,7 +281,7 @@
 						<div class="answer-faqs">
 							<ul class="cbx-list cbx-text">
 								<li class="list-item">- Al validar tu número celular puede que no coincida con el número registrado a tu nombre. Si cambiaste de número celular te sugerimos asociar tu nuevo número marcando al <a href="tel:015546312669" class="cbx-link trx-link" m-mody="phone">01 (55) 4631 2669</a> o al <a href="tel:*4444" class="cbx-link trx-link" m-mody="phone">*4444</a> desde tu Telcel.</li>
-								<li class="list-item">- Al ingresar tus datos manualmente puede que no coincidan tus datos personales. Te sugerimos volver a intentarlo escaneando tu INE o IFE y revisando que tu fecha y lugar de nacimiento sea idéntico al que figura en tu CURP <a href="https://www.gob.mx/curp/" class="cbx-link trx-link" target="_blank">https://www.gob.mx/curp/</a>.</li>
+								<li class="list-item">- Al ingresar tus datos manualmente puede que no coincidan tus datos personales. Te sugerimos volver a intentarlo escaneando tu INE o IFE y revisando que tu fecha y lugar de nacimiento sea idéntico al que figura en tu CURP <a href="https://www.gob.mx/curp/" class="cbx-link trx-link" target="_blank" m-exit='{"metrics":"TextoBottom-04042019-Information-irCURP","sponsor":"CURP", "path": "https://www.gob.mx/curp/", "extra":""}'>www.gob.mx/curp</a>.</li>
 							</ul>
 							<p class="cbx-text">Si ninguna de las opciones resuelve el problema marca al <a href="tel:015546312669" class="cbx-link trx-link" m-mody="phone">01 (55) 4631 2669</a> o al <a href="tel:*4444" class="cbx-link trx-link" m-mody="phone">*4444</a> desde tu Telcel, de lunes a domingo de 08:00 a 22:00 horas.</p>
 						</div>
@@ -298,7 +300,7 @@
 							</div>
 							<div class="item">
 								<p class="cbx-text" m-font="bold">¿Necesitas apoyo con la App Transfer?</p>
-								<a class="cbx-link trx-link" href="/transfer/centro-de-ayuda/cuenta-transfer-citibanamex/cuenta-transfer-citibanamex.html" target="_blank">Conoce más en nuestro centro de ayuda</a>
+								<a class="cbx-link trx-link" metrics-lid="/transfer/centro-de-ayuda/cuenta-transfer-citibanamex/index.html?PreguntasFrecuentes-Information-irCentroDeAyuda" target="_blank">Conoce más en nuestro centro de ayuda</a>
 							</div>
 						</div>
 					</div>
@@ -309,7 +311,7 @@
 	<section m-desk="legals" class="cbx-wrapper">
 		<div class="legals-links">
 			<div class="link-content">
-				<a class="cbx-link trx-link" href="/transfer/aviso-legal.html">Aviso legal</a>
+				<a class="cbx-link trx-link" href="/transfer/aviso-legal.html" target="_blank">Aviso legal</a>
 			</div>
 			<div class="link-content">
 				<a class="cbx-link trx-link" href="/resources/pdf/es/ley_transparencia/comisiones/comisiones-cuenta-transfer-banamex.pdf" target="_blank">Comisiones</a>
@@ -318,13 +320,13 @@
 				<a class="cbx-link trx-link" href="/transfer/pdf/contrato_transfer_banamex.pdf" target="_blank">Contrato</a>
 			</div>
 			<div class="link-content">
-				<a class="cbx-link trx-link" href="/transfer/operaciones-seguras.html">Seguridad</a>
+				<a class="cbx-link trx-link" href="/transfer/operaciones-seguras.html" target="_blank">Seguridad</a>
 			</div>
 		</div>
 		<p class="cbx-legal" m-font="pre-line">
-			© 2017 Banco Nacional de México, S.A., integrante del Grupo Financiero Banamex CITIBANAMEX y CITIBANAMEX y Diseño son marcas registradas de servicios y productos de Citigroup Inc. y Banco Nacional de México, S.A., integrante del Grupo Financiero Banamex (“Citibanamex”). Cuenta Transfer Banamex es un producto ofrecido por Banco Nacional de México S.A. integrante de Grupo Financiero Banamex. Cuenta Transfer es un producto garantizado por el IPAB hasta por 400 mil Unidades de Inversión (UDIS) por cliente y por banco <a class="cbx-ink trx-link" href="http://www.gob.mx/ipab" m-font="inherit-size" target="_blank">www.gob.mx/ipab</a> La Tarjeta Saldazo es un medio de disposición de tu cuenta Transfer Banamex. Saldazo de OXXO es una marca registrada por Cadena Comercial
+			© 2017 Banco Nacional de México, S.A., integrante del Grupo Financiero Banamex CITIBANAMEX y CITIBANAMEX y Diseño son marcas registradas de servicios y productos de Citigroup Inc. y Banco Nacional de México, S.A., integrante del Grupo Financiero Banamex (“Citibanamex”). Cuenta Transfer Banamex es un producto ofrecido por Banco Nacional de México S.A. integrante de Grupo Financiero Banamex. Cuenta Transfer es un producto garantizado por el IPAB hasta por 400 mil Unidades de Inversión (UDIS) por cliente y por banco <a href="https://www.gob.mx/ipab" class="cbx-ink trx-link" target="_blank" m-exit='{"metrics":"TextoBottom-04042019-Information-irIPAB","sponsor":"IPAB", "path": "https://www.gob.mx/ipab", "extra":""}'>www.gob.mx/ipab</a>. La Tarjeta Saldazo es un medio de disposición de tu cuenta Transfer Banamex. Saldazo de OXXO<sup>®</sup> es una marca registrada por Cadena Comercial OXXO<sup>®</sup> S.A. de C.V La Tarjeta Saldazo es un medio de disposición de la cuenta Transfer Banamex cuyo contrato, comisiones y requisitos de contratación están a tu disposición en Sucursales Citibanamex o en <a class="cbx-ink trx-link" href="/transfer/" m-font="inherit-size">citibanamex.com/transfer</a>.
 			
-			OXXO S.A. de C.V La Tarjeta Saldazo es un medio de disposición de la cuenta Transfer Banamex cuyo contrato, comisiones y requisitos de contratación están a tu disposición en Sucursales Citibanamex o en <a class="cbx-ink trx-link" href="/transfer/" m-font="inherit-size">citibanamex.com/transfer</a> Para aclaraciones o quejas relacionadas con tu Cuenta Transfer Banamex, comunicarse al Centro de Atención Telefónica Transfer Banamex desde tu Telcel al <a class="cbx-link trx-link" href="tel:*4444" m-mody="phone" m-font="inherit-size">*4444</a>, desde cualquier otro teléfono al <a class="cbx-link trx-link" href="tel:015546312669" m-mody="phone" m-font="inherit-size">01 (55) 4631 2669</a> o a la Unidad Especializada de Atención Telefónica <a class="cbx-link trx-link" href="tel:5512264583" m-mody="phone" m-font="inherit-size">(55) 1226 4583</a>, correo electrónico <a href="mailto:une@citibanamex.com" class="cbx-link trx-link" m-font="inherit-size">une@citibanamex.com</a> Centro de Atención Telefónica CONDUSEF <a class="cbx-link trx-link" href="tel:018009998080" m-mody="phone" m-font="inherit-size">01 800 9998 080</a>. Las empresas anunciantes son responsables del cumplimiento, tarifas, calidad de los productos y servicios ofrecidos, liberando de cualquier responsabilidad sobre éste particular a las empresas integrantes, afiliadas o subsidiarias del Grupo Financiero Banamex. Esta es una oferta de producto dirigida solo para residentes en México.
+			Para aclaraciones o quejas relacionadas con tu Cuenta Transfer Banamex, comunicarse al Centro de Atención Telefónica Transfer Banamex desde tu Telcel al <a class="cbx-link trx-link" href="tel:*4444" m-mody="phone" m-font="inherit-size">*4444</a>, desde cualquier otro teléfono al <a class="cbx-link trx-link" href="tel:015546312669" m-mody="phone" m-font="inherit-size">01 (55) 4631 2669</a> o a la Unidad Especializada de Atención Telefónica <a class="cbx-link trx-link" href="tel:5512264583" m-mody="phone" m-font="inherit-size">(55) 1226 4583</a>, correo electrónico <a href="mailto:une@citibanamex.com" class="cbx-link trx-link" m-font="inherit-size">une@citibanamex.com</a> Centro de Atención Telefónica CONDUSEF <a class="cbx-link trx-link" href="tel:018009998080" m-mody="phone" m-font="inherit-size">01 800 9998 080</a>. Las empresas anunciantes son responsables del cumplimiento, tarifas, calidad de los productos y servicios ofrecidos, liberando de cualquier responsabilidad sobre éste particular a las empresas integrantes, afiliadas o subsidiarias del Grupo Financiero Banamex. Esta es una oferta de producto dirigida solo para residentes en México.
 
 			© 2018 Google LLC Todos los derechos reservados. Google Play™ Store y el logotipo de Google Play™ son marcas comerciales de Google LLC. Apple®, el logotipo de Apple® y App Store® son marcas comerciales de Apple Inc., registradas en los EE.UU. y en otros países. La App Transfer se encuentra disponible para teléfonos inteligentes con sistema operativo iOS y Android.
 		</p>
@@ -333,5 +335,8 @@
 	<script src="/assets/js/bootstrap-bundle-min.js"></script>
 	<script src="/transfer/assets/js/trx-components-transfer.bundle.js"></script>
 	<script src="/transfer/assets/js/trx-header-footer-transfer.bundle.js"></script>
+	<script src="/recursos/js/mx_citi_s_code_v2.js"></script>
+	<script src="/assets/js/library_metrics.js"></script>
+	<script src="/transfer/assets/js/metricas.js"></script>
 </body>
 </html>
